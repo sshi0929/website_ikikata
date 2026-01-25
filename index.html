@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Ikikata Co., Ltd. | 株式会社いきかた</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&amp;family=Zen+Old+Mincho:wght@400;700&amp;family=Inter:wght@300;400;600&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#3d5a80", // Deep professional blue
+                        accent: "#ee6c4d",  // Warm sunset orange accent
+                        "background-light": "#faf9f6", // Paper-like off-white
+                        "background-dark": "#1a1a1a",
+                    },
+                    fontFamily: {
+                        display: ["Zen Old Mincho", "serif"],
+                        serif: ["Noto Serif JP", "serif"],
+                        sans: ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                        'xl': '1.5rem',
+                    },
+                },
+            },
+        };
+    </script>
+    <style type="text/tailwindcss">
+        .watercolor-bg {
+            background: linear-gradient(rgba(250, 249, 246, 0.2), rgba(250, 249, 246, 0.2)), 
+                        url('https://images.unsplash.com/photo-1518111452205-50984651365c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .brush-text {
+            writing-mode: vertical-rl;
+            text-orientation: upright;
+        }
+        @media (max-width: 1024px) {
+            .brush-text {
+                writing-mode: horizontal-tb;
+            }
+        }
+        .soft-shadow {
+            box-shadow: 0 10px 30px -10px rgba(0,0,0,0.05);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200 font-sans transition-colors duration-300">
+    <header
+        class="fixed w-full top-0 z-50 bg-background-light dark:bg-background-dark border-b border-slate-200/50 dark:border-slate-800/50">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between relative">
+            <div class="flex items-center gap-2">
+                <img src="https://storage.googleapis.com/website_data_shinmi/logo.png" alt="株式会社いきかた"
+                    class="h-12 md:h-20 w-auto transition-all" />
+            </div>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center gap-10">
+                <a class="text-sm font-medium hover:text-accent transition-colors" href="#">Home</a>
+                <a class="text-sm font-medium hover:text-accent transition-colors" href="#mission">About</a>
+                <a class="text-sm font-medium hover:text-accent transition-colors" href="#services">Services</a>
+                <a class="px-5 py-2.5 bg-primary text-white text-sm font-semibold rounded-full hover:shadow-lg transition-all transform hover:-translate-y-0.5"
+                    href="#contact">Contact</a>
+            </nav>
+
+            <!-- Mobile Menu Toggler -->
+            <div class="flex items-center gap-4 md:hidden">
+                <button id="mobile-menu-btn" class="text-primary dark:text-white p-2">
+                    <span class="material-symbols-outlined text-3xl">menu</span>
+                </button>
+            </div>
+
+            <!-- Mobile Menu Overlay -->
+            <div id="mobile-menu"
+                class="fixed inset-0 bg-background-light dark:bg-background-dark z-[100] flex flex-col items-center justify-center gap-8 translate-x-full transition-transform duration-300 md:hidden shadow-2xl">
+                <button id="mobile-close-btn" class="absolute top-6 right-6 text-primary dark:text-white p-2">
+                    <span class="material-symbols-outlined text-4xl">close</span>
+                </button>
+                <a class="text-2xl font-display text-slate-900 dark:text-white" href="#" onclick="toggleMenu()">Home</a>
+                <a class="text-2xl font-display text-slate-900 dark:text-white" href="#mission"
+                    onclick="toggleMenu()">About</a>
+                <a class="text-2xl font-display text-slate-900 dark:text-white" href="#services"
+                    onclick="toggleMenu()">Services</a>
+                <a class="px-8 py-3 bg-primary text-white text-lg font-semibold rounded-full" href="#contact"
+                    onclick="toggleMenu()">Contact</a>
+            </div>
+        </div>
+
+        <script>
+            function toggleMenu() {
+                const menu = document.getElementById('mobile-menu');
+                menu.classList.toggle('translate-x-full');
+            }
+            document.getElementById('mobile-menu-btn').addEventListener('click', toggleMenu);
+            document.getElementById('mobile-close-btn').addEventListener('click', toggleMenu);
+        </script>
+    </header>
+    <!-- Hero Section (Premium Mobile Aesthetics) -->
+    <section
+        class="relative min-h-[85vh] md:min-h-[80vh] flex items-center justify-center bg-background-light dark:bg-background-dark overflow-hidden pt-24 pb-12">
+        <div class="max-w-7xl mx-auto px-6 w-full relative">
+            <div class="grid lg:grid-cols-12 gap-8 items-center">
+
+                <!-- Text Content Area (Prioritized & Elegant) -->
+                <div class="lg:col-span-6 z-20 mt-8 lg:mt-0">
+                    <p class="text-accent font-display font-semibold tracking-[0.2em] mb-3 text-sm md:text-base">SOULFUL
+                        CAREER DESIGN</p>
+                    <h1 class="text-3xl md:text-6xl font-display leading-[1.3] text-slate-900 dark:text-white mb-6">
+                        一人ひとりがキャリアを<br class="md:hidden" />自創する<br />
+                        キッカケになる。
+                    </h1>
+                    <p class="text-base md:text-lg text-slate-600 dark:text-slate-400 max-w-md leading-relaxed mb-8">
+                        私たちは、個人の原体験を紐解き、誰もが自分らしい「いきかた」を自ら創造できる社会を目指すキャリアデザイン・パートナーです。
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a class="px-7 py-3.5 bg-primary text-white font-bold rounded hover:bg-primary/90 transition-all flex items-center gap-2 text-sm"
+                            href="#services">
+                            サービスを見る <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Image Frame Area (Artistic Overlap on Mobile) -->
+                <div class="lg:col-span-6 relative z-10 mt-8 md:mt-0 lg:-ml-20">
+                    <div class="relative rounded-xl overflow-hidden shadow-sm max-w-full mx-auto lg:max-w-none">
+                        <!-- Image with softness -->
+                        <img alt="Serene sunset"
+                            class="w-full h-auto opacity-75 md:opacity-70 grayscale-[5%] contrast-[95%]"
+                            src="https://storage.googleapis.com/website_data_shinmi/top.png" />
+
+                        <!-- Soft gradient blending -->
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-background-light via-transparent to-transparent md:bg-gradient-to-r md:from-background-light dark:from-background-dark">
+                        </div>
+
+                        <!-- Texture overlay -->
+                        <div class="absolute inset-0 opacity-10 pointer-events-none mix-blend-multiply dark:mix-blend-screen"
+                            style="background-image: url('https://www.transparenttextures.com/patterns/paper.png');">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section (Responsive Full-Width Banner with Mobile Fix) -->
+    <section
+        class="relative w-full aspect-auto md:aspect-[21/9] min-h-[550px] md:min-h-[600px] flex items-center overflow-hidden bg-background-light dark:bg-background-dark"
+        id="mission">
+        <div class="absolute inset-0 z-0">
+            <!-- object-right pushes the image as far right as possible to avoid face overlap -->
+            <img alt="Takayuki Shinmi - Founder of Ikikata" class="w-full h-full object-cover object-right"
+                src="https://storage.googleapis.com/website_data_shinmi/counseling.png" />
+
+            <!-- Mobile-specific gradient fade to ensure text readability -->
+            <div
+                class="absolute inset-0 bg-white/90 md:bg-transparent md:bg-gradient-to-r md:from-white/95 md:via-white/80 md:to-transparent dark:bg-background-dark/90 md:dark:bg-transparent">
+            </div>
+            <div
+                class="absolute inset-0 md:hidden bg-gradient-to-b from-white/20 via-white/80 to-white dark:from-background-dark/20 dark:via-background-dark/80 dark:to-background-dark">
+            </div>
+        </div>
+
+        <div
+            class="relative z-10 max-w-7xl mx-auto px-6 w-full py-24 md:py-32 flex items-center min-h-[550px] md:min-h-[600px]">
+            <!-- 2-column approach for desktop: Text on the left half, Image faces on the right half -->
+            <div class="w-full md:w-1/2">
+                <div
+                    class="bg-white/80 md:bg-transparent backdrop-blur-xl md:backdrop-blur-none p-8 md:p-0 rounded-3xl mt-24 md:mt-0">
+                    <h2 class="text-xs md:text-sm font-display font-bold tracking-widest text-accent mb-4">OUR MISSION
+                    </h2>
+                    <h3
+                        class="text-2xl md:text-5xl font-serif leading-tight mb-6 md:mb-8 text-slate-900 dark:text-white">
+                        「正解」を探すのではなく<br />「・・・・」を育んでいくプロセス
+                    </h3>
+                    <div
+                        class="space-y-4 md:space-y-6 text-slate-700 dark:text-slate-300 leading-relaxed font-serif text-base md:text-lg">
+                        <p>
+                            VUCAと呼ばれる不透明な時代において、真のキャリアとは、自らの内にある願いや価値観に耳を傾け、それを形にしていくプロセスそのものです。
+                        </p>
+                        <p>
+                            株式会社いきかたは、単なるスキルアップや転職支援に留まりません。あなたの人生（いきかた）の根底にある「意志」を言語化し、一歩踏み出すための伴走をいたします。
+                        </p>
+                    </div>
+                    <div class="mt-8 md:mt-12 flex items-center gap-4">
+                        <div class="h-px w-10 md:w-12 bg-primary/30"></div>
+                        <p class="text-slate-900 dark:text-white font-serif font-bold italic text-base md:text-lg">
+                            代表取締役: 新見
+                            貴之 (Takayuki Shinmi)</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Empty column for image focus -->
+            <div class="hidden md:block md:w-1/2"></div>
+        </div>
+    </section>
+    <section class="py-24 bg-background-light dark:bg-background-dark" id="services">
+        <div class="max-w-7xl mx-auto px-6 text-center mb-16">
+            <h2 class="text-sm font-display font-bold tracking-widest text-accent mb-4">SERVICES</h2>
+        </div>
+        <div
+            class="max-w-7xl mx-auto px-6 flex md:grid md:grid-cols-3 gap-6 md:gap-8 overflow-x-auto md:overflow-x-visible snap-x snap-mandatory scrollbar-hide pb-8 md:pb-0">
+            <div
+                class="group flex-shrink-0 w-[85vw] md:w-auto bg-white dark:bg-zinc-900 p-10 rounded-2xl soft-shadow hover:-translate-y-2 transition-all duration-300 border border-slate-100 dark:border-slate-800 snap-center">
+                <div
+                    class="w-20 h-20 bg-[#2f4858]/10 rounded-full flex items-center justify-center mb-8 group-hover:bg-[#2f4858] group-hover:text-white transition-colors">
+                    <span class="material-symbols-outlined text-4xl">explore</span>
+                </div>
+                <h4 class="text-2xl font-serif mb-4 text-slate-900 dark:text-white">Career Coaching</h4>
+                <p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-8">
+                    現在のキャリアに対する違和感を解消し、自分らしい目的地を見定めるためのパーソナルセッションです。
+                </p>
+                <ul class="text-left space-y-3 mb-10 text-sm text-slate-500">
+                    <li class="flex items-center gap-2"><span
+                            class="material-symbols-outlined text-[#2f4858] text-[18px]">check_circle</span> キャリアの棚卸し
+                    </li>
+                    <li class="flex items-center gap-2"><span
+                            class="material-symbols-outlined text-[#2f4858] text-[18px]">check_circle</span> 強みの言語化</li>
+                    <li class="flex items-center gap-2"><span
+                            class="material-symbols-outlined text-[#2f4858] text-[18px]">check_circle</span> 中長期ビジョン策定
+                    </li>
+                </ul>
+                <a class="text-[#2f4858] font-bold hover:underline inline-flex items-center gap-1" href="#">Learn More
+                    <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+            </div>
+            <div
+                class="group flex-shrink-0 w-[85vw] md:w-auto bg-white dark:bg-zinc-900 p-10 rounded-2xl soft-shadow hover:-translate-y-2 transition-all duration-300 border border-slate-100 dark:border-slate-800 snap-center">
+                <div
+                    class="w-20 h-20 bg-[#84a59d]/10 rounded-full flex items-center justify-center mb-8 group-hover:bg-[#84a59d] group-hover:text-white transition-colors">
+                    <span class="material-symbols-outlined text-4xl">psychology</span>
+                </div>
+                <h4 class="text-2xl font-serif mb-4 text-slate-900 dark:text-white">Mindset Design</h4>
+                <p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-8">
+                    行動を妨げるマインドブロックを解き、しなやかで強固な「自分軸」を構築するワークショップです。
+                </p>
+                <ul class="text-left space-y-3 mb-10 text-sm text-slate-500">
+                    <li class="flex items-center gap-2"><span
+                            class="material-symbols-outlined text-[#84a59d] text-[18px]">check_circle</span> 価値観の再定義
+                    </li>
+                    <li class="flex items-center gap-2"><span
+                            class="material-symbols-outlined text-[#84a59d] text-[18px]">check_circle</span> 感情のセルフケア
+                    </li>
+                    <li class="flex items-center gap-2"><span
+                            class="material-symbols-outlined text-[#84a59d] text-[18px]">check_circle</span> 習慣化プログラム
+                    </li>
+                </ul>
+                <a class="text-[#84a59d] font-bold hover:underline inline-flex items-center gap-1" href="#">Learn More
+                    <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+            </div>
+            <div
+                class="group flex-shrink-0 w-[85vw] md:w-auto bg-white dark:bg-zinc-900 p-10 rounded-2xl soft-shadow hover:-translate-y-2 transition-all duration-300 border border-slate-100 dark:border-slate-800 snap-center">
+                <div
+                    class="w-20 h-20 bg-[#b58863]/10 rounded-full flex items-center justify-center mb-8 group-hover:bg-[#b58863] group-hover:text-white transition-colors">
+                    <span class="material-symbols-outlined text-4xl">auto_awesome</span>
+                </div>
+                <h4 class="text-2xl font-serif mb-4 text-slate-900 dark:text-white">Personal Branding</h4>
+                <p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-8">
+                    フリーランスや複業を考える方へ。あなただけの「選ばれる理由」を抽出し、社会へ届けるサポートを。
+                </p>
+                <ul class="text-left space-y-3 mb-10 text-sm text-slate-500">
+                    <li class="flex items-center gap-2"><span
+                            class="material-symbols-outlined text-[#b58863] text-[18px]">check_circle</span> 市場価値の分析
+                    </li>
+                    <li class="flex items-center gap-2"><span
+                            class="material-symbols-outlined text-[#b58863] text-[18px]">check_circle</span> 発信コンセプト策定
+                    </li>
+                    <li class="flex items-center gap-2"><span
+                            class="material-symbols-outlined text-[#b58863] text-[18px]">check_circle</span> SNS・Web活用支援
+                    </li>
+                </ul>
+                <a class="text-[#b58863] font-bold hover:underline inline-flex items-center gap-1" href="#">Learn More
+                    <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+            </div>
+        </div>
+    </section>
+    <section class="py-24 bg-primary text-white overflow-hidden relative">
+        <div class="absolute inset-0 opacity-10">
+            <img alt="paper texture" class="w-full h-full"
+                src="https://storage.googleapis.com/website_data_shinmi/quote.png" />
+        </div>
+        <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+            <span class="material-symbols-outlined text-6xl mb-8 opacity-50">format_quote</span>
+            <blockquote class="text-2xl md:text-3xl font-serif italic leading-relaxed mb-10">
+                いきかたさんのコーチングを受けて、長年抱えていた『何か違う』という感覚が、確信に変わりました。今は他人の期待に応えるのではなく、自分のために働けています。
+            </blockquote>
+            <p class="text-lg font-serif">ITコンサルタント / 30代女性</p>
+        </div>
+    </section>
+    <section class="py-24 bg-white dark:bg-zinc-900" id="contact">
+        <div class="max-w-5xl mx-auto px-6 bg-background-light dark:bg-zinc-800 rounded-3xl p-12 md:p-20 text-center">
+            <h2 class="text-3xl md:text-4xl font-serif text-slate-900 dark:text-white mb-6">まずは、あなたの「今」を<br
+                    class="md:hidden" />お聞かせください</h2>
+            <p class="text-slate-600 dark:text-slate-400 mb-10 max-w-xl mx-auto">
+                無料オンラインカウンセリングを実施しております。キャリアに関するどんなお悩みでも構いません。
+            </p>
+            <form class="max-w-md mx-auto space-y-4">
+                <input
+                    class="w-full px-6 py-4 rounded-full border-none bg-white dark:bg-zinc-700 shadow-sm focus:ring-2 focus:ring-primary transition-all"
+                    placeholder="メールアドレス" type="email" />
+                <button
+                    class="w-full bg-primary text-white font-bold py-4 rounded-full hover:shadow-xl transition-all transform hover:-translate-y-1"
+                    type="submit">
+                    無料で相談する
+                </button>
+            </form>
+        </div>
+    </section>
+    <footer class="bg-slate-900 text-slate-400 py-16">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12">
+            <div class="col-span-1 md:col-span-2">
+                <h2 class="text-2xl font-display text-white mb-6 tracking-widest">株式会社いきかた</h2>
+                <p class="mb-4">Ikikata Co., Ltd.</p>
+                <p class="text-sm leading-relaxed max-w-sm">
+                    私たちは、出会ったひとの原体験を紐解きながら、一人ひとりがキャリアを自創するきっかけにしていただくことをを支援するパートナーです。
+                </p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-6">Contact</h4>
+                <p class="text-sm mb-2">Email: t.shinmi@ikikata.co.jp</p>
+                <p class="text-sm">Web: www.ikikata.co.jp</p>
+                <div class="flex gap-4 mt-6">
+                    <a class="hover:text-white transition-colors" href="#"><span
+                            class="material-symbols-outlined">social_leaderboard</span></a>
+                    <a class="hover:text-white transition-colors" href="#"><span
+                            class="material-symbols-outlined">alternate_email</span></a>
+                    <a class="hover:text-white transition-colors" href="#"><span
+                            class="material-symbols-outlined">photo_camera</span></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-6">Links</h4>
+                <ul class="text-sm space-y-3">
+                    <li><a class="hover:text-white transition-colors" href="#">Privacy Policy</a></li>
+                    <li><a class="hover:text-white transition-colors" href="#">Terms of Service</a></li>
+                    <li><a class="hover:text-white transition-colors" href="#">Recruit</a></li>
+                </ul>
+            </div>
+        </div>
+        <div
+            class="max-w-7xl mx-auto px-6 border-t border-slate-800 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-xs">© 2026 Ikikata Co., Ltd. All rights reserved.</p>
+            <p class="text-xs font-serif tracking-widest italic">Soulful Professionalism</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
