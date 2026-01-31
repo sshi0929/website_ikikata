@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Contact | 株式会社いきかた</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&amp;family=Zen+Old+Mincho:wght@400;700&amp;family=Inter:wght@300;400;600&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#3d5a80",
+                        accent: "#ee6c4d",
+                        "background-light": "#faf9f6",
+                        "background-dark": "#1a1a1a",
+                    },
+                    fontFamily: {
+                        display: ["Zen Old Mincho", "serif"],
+                        serif: ["Noto Serif JP", "serif"],
+                        sans: ["Inter", "sans-serif"],
+                    },
+                },
+            },
+        };
+    </script>
+    <style type="text/tailwindcss">
+        .soft-shadow {
+            box-shadow: 0 10px 30px -10px rgba(0,0,0,0.05);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        @media (max-width: 768px) {
+            a, button {
+                min-height: 44px;
+                display: inline-flex;
+                align-items: center;
+            }
+        }
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(61, 90, 128, 0.2);
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200 font-sans transition-colors duration-300">
+
+    <!-- Header -->
+    <header class="fixed w-full top-0 z-50 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm border-b border-slate-200/50 dark:border-slate-800/50">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 h-16 md:h-20 flex items-center justify-between">
+            <a href="index-mobile-first.html" class="flex items-center">
+                <img src="https://storage.googleapis.com/website_data_shinmi/logo.png" alt="株式会社いきかた" class="h-10 md:h-16 lg:h-20 w-auto" />
+            </a>
+            <nav class="hidden md:flex items-center gap-6 lg:gap-10">
+                <a class="text-sm font-medium hover:text-accent transition-colors" href="index-mobile-first.html">Home</a>
+                <a class="text-sm font-medium hover:text-accent transition-colors" href="about.html">About</a>
+                <a class="text-sm font-medium hover:text-accent transition-colors" href="services.html">Services</a>
+                <a class="px-5 py-2.5 bg-primary text-white text-sm font-semibold rounded-full hover:shadow-lg transition-all" href="contact.html">Contact</a>
+            </nav>
+            <button id="mobile-menu-btn" class="md:hidden p-2 -mr-2 text-primary dark:text-white" aria-label="メニューを開く">
+                <span class="material-symbols-outlined text-2xl">menu</span>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="fixed inset-0 bg-background-light dark:bg-background-dark z-[100] flex flex-col translate-x-full transition-transform duration-300 ease-out md:hidden">
+            <div class="flex items-center justify-between px-4 h-16 border-b border-slate-200/50 dark:border-slate-800/50">
+                <img src="https://storage.googleapis.com/website_data_shinmi/logo.png" alt="株式会社いきかた" class="h-10 w-auto" />
+                <button id="mobile-close-btn" class="p-2 -mr-2 text-primary dark:text-white" aria-label="メニューを閉じる">
+                    <span class="material-symbols-outlined text-2xl">close</span>
+                </button>
+            </div>
+            <nav class="flex-1 flex flex-col items-center justify-center gap-8 px-6">
+                <a class="text-xl font-display text-slate-900 dark:text-white" href="index-mobile-first.html" onclick="toggleMenu()">Home</a>
+                <a class="text-xl font-display text-slate-900 dark:text-white" href="about.html" onclick="toggleMenu()">About</a>
+                <a class="text-xl font-display text-slate-900 dark:text-white" href="services.html" onclick="toggleMenu()">Services</a>
+                <a class="mt-4 px-8 py-3 bg-primary text-white text-base font-semibold rounded-full" href="contact.html" onclick="toggleMenu()">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('translate-x-full');
+            document.body.classList.toggle('overflow-hidden');
+        }
+        document.getElementById('mobile-menu-btn').addEventListener('click', toggleMenu);
+        document.getElementById('mobile-close-btn').addEventListener('click', toggleMenu);
+    </script>
+
+    <!-- Page Hero -->
+    <section class="pt-24 md:pt-32 pb-12 md:pb-16 bg-background-light dark:bg-background-dark">
+        <div class="max-w-7xl mx-auto px-5 md:px-6 lg:px-8">
+            <p class="text-accent font-display font-semibold tracking-[0.15em] mb-2 text-xs md:text-sm">CONTACT</p>
+            <h1 class="text-3xl md:text-5xl lg:text-6xl font-display leading-tight text-slate-900 dark:text-white mb-4">
+                お問い合わせ
+            </h1>
+            <p class="text-slate-600 dark:text-slate-400 text-base md:text-lg max-w-2xl">
+                無料カウンセリングのご予約、サービスに関するご質問など、お気軽にお問い合わせください。
+            </p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="py-12 md:py-20 bg-background-light dark:bg-background-dark">
+        <div class="max-w-7xl mx-auto px-5 md:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-5 gap-12 lg:gap-16">
+                
+                <!-- Contact Form -->
+                <div class="lg:col-span-3">
+                    <div class="bg-white dark:bg-zinc-900 rounded-2xl soft-shadow border border-slate-100 dark:border-slate-800 p-6 md:p-10">
+                        <h2 class="text-xl md:text-2xl font-serif text-slate-900 dark:text-white mb-6">
+                            お問い合わせフォーム
+                        </h2>
+                        
+                        <form class="space-y-6">
+                            <!-- Inquiry Type -->
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
+                                    お問い合わせ種別 <span class="text-accent">*</span>
+                                </label>
+                                <select class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-zinc-800 text-slate-900 dark:text-white text-sm transition-all" required>
+                                    <option value="">選択してください</option>
+                                    <option value="consultation">無料カウンセリングの予約</option>
+                                    <option value="service">サービスに関するご質問</option>
+                                    <option value="corporate">法人・研修のご相談</option>
+                                    <option value="media">取材・メディア掲載</option>
+                                    <option value="other">その他</option>
+                                </select>
+                            </div>
+
+                            <!-- Name -->
+                            <div class="grid md:grid-cols-2 gap-4 md:gap-6">
+                                <div>
+                                    <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
+                                        お名前（姓） <span class="text-accent">*</span>
+                                    </label>
+                                    <input type="text" class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-zinc-800 text-slate-900 dark:text-white text-sm transition-all" placeholder="山田" required />
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
+                                        お名前（名） <span class="text-accent">*</span>
+                                    </label>
+                                    <input type="text" class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-zinc-800 text-slate-900 dark:text-white text-sm transition-all" placeholder="太郎" required />
+                                </div>
+                            </div>
+
+                            <!-- Email -->
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
+                                    メールアドレス <span class="text-accent">*</span>
+                                </label>
+                                <input type="email" class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-zinc-800 text-slate-900 dark:text-white text-sm transition-all" placeholder="example@email.com" required />
+                            </div>
+
+                            <!-- Phone (Optional) -->
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
+                                    電話番号（任意）
+                                </label>
+                                <input type="tel" class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-zinc-800 text-slate-900 dark:text-white text-sm transition-all" placeholder="090-1234-5678" />
+                            </div>
+
+                            <!-- Interested Service -->
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
+                                    ご興味のあるサービス
+                                </label>
+                                <div class="space-y-3">
+                                    <label class="flex items-center gap-3 cursor-pointer">
+                                        <input type="checkbox" class="w-5 h-5 rounded border-slate-300 text-primary focus:ring-primary" />
+                                        <span class="text-sm text-slate-600 dark:text-slate-400">Career Coaching（キャリアコーチング）</span>
+                                    </label>
+                                    <label class="flex items-center gap-3 cursor-pointer">
+                                        <input type="checkbox" class="w-5 h-5 rounded border-slate-300 text-primary focus:ring-primary" />
+                                        <span class="text-sm text-slate-600 dark:text-slate-400">Mindset Design（マインドセットデザイン）</span>
+                                    </label>
+                                    <label class="flex items-center gap-3 cursor-pointer">
+                                        <input type="checkbox" class="w-5 h-5 rounded border-slate-300 text-primary focus:ring-primary" />
+                                        <span class="text-sm text-slate-600 dark:text-slate-400">Personal Branding（パーソナルブランディング）</span>
+                                    </label>
+                                    <label class="flex items-center gap-3 cursor-pointer">
+                                        <input type="checkbox" class="w-5 h-5 rounded border-slate-300 text-primary focus:ring-primary" />
+                                        <span class="text-sm text-slate-600 dark:text-slate-400">まだわからない / 相談したい</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Message -->
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
+                                    お問い合わせ内容 <span class="text-accent">*</span>
+                                </label>
+                                <textarea rows="5" class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-zinc-800 text-slate-900 dark:text-white text-sm transition-all resize-none" placeholder="現在のお悩みやご質問など、ご自由にお書きください。" required></textarea>
+                            </div>
+
+                            <!-- How did you hear about us -->
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
+                                    当社を知ったきっかけ
+                                </label>
+                                <select class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-zinc-800 text-slate-900 dark:text-white text-sm transition-all">
+                                    <option value="">選択してください</option>
+                                    <option value="search">検索エンジン（Google等）</option>
+                                    <option value="sns">SNS（Twitter, Instagram等）</option>
+                                    <option value="referral">知人の紹介</option>
+                                    <option value="event">イベント・セミナー</option>
+                                    <option value="other">その他</option>
+                                </select>
+                            </div>
+
+                            <!-- Privacy Policy Agreement -->
+                            <div>
+                                <label class="flex items-start gap-3 cursor-pointer">
+                                    <input type="checkbox" class="w-5 h-5 rounded border-slate-300 text-primary focus:ring-primary mt-0.5" required />
+                                    <span class="text-sm text-slate-600 dark:text-slate-400">
+                                        <a href="#" class="text-primary underline">プライバシーポリシー</a>に同意します <span class="text-accent">*</span>
+                                    </span>
+                                </label>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <div class="pt-4">
+                                <button type="submit" class="w-full md:w-auto px-10 py-4 bg-primary text-white font-bold rounded-full hover:shadow-xl transition-all transform hover:-translate-y-1 text-base flex items-center justify-center gap-2">
+                                    送信する
+                                    <span class="material-symbols-outlined text-sm">send</span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Contact Info Sidebar -->
+                <div class="lg:col-span-2 space-y-6">
+                    
+                    <!-- Free Consultation Card -->
+                    <div class="bg-primary text-white rounded-2xl p-6 md:p-8">
+                        <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mb-4">
+                            <span class="material-symbols-outlined text-2xl">event_available</span>
+                        </div>
+                        <h3 class="text-lg md:text-xl font-serif mb-3">無料カウンセリング</h3>
+                        <p class="text-white/80 text-sm leading-relaxed mb-4">
+                            30分の無料オンラインカウンセリングを実施しています。キャリアに関するどんなお悩みでもお気軽にご相談ください。
+                        </p>
+                        <ul class="space-y-2 text-sm text-white/90">
+                            <li class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-[16px]">schedule</span>
+                                所要時間：約30分
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-[16px]">videocam</span>
+                                形式：オンライン（Zoom）
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-[16px]">payments</span>
+                                料金：無料
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Direct Contact -->
+                    <div class="bg-white dark:bg-zinc-900 rounded-2xl soft-shadow border border-slate-100 dark:border-slate-800 p-6 md:p-8">
+                        <h3 class="text-lg md:text-xl font-serif text-slate-900 dark:text-white mb-4">直接のお問い合わせ</h3>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 bg-slate-100 dark:bg-zinc-800 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <span class="material-symbols-outlined text-primary text-xl">mail</span>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-slate-500 dark:text-slate-400 mb-1">Email</p>
+                                    <a href="mailto:t.shinmi@ikikata.co.jp" class="text-slate-900 dark:text-white font-medium text-sm hover:text-primary transition-colors">
+                                        t.shinmi@ikikata.co.jp
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 bg-slate-100 dark:bg-zinc-800 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <span class="material-symbols-outlined text-primary text-xl">language</span>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-slate-500 dark:text-slate-400 mb-1">Website</p>
+                                    <a href="#" class="text-slate-900 dark:text-white font-medium text-sm hover:text-primary transition-colors">
+                                        www.ikikata.co.jp
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Response Time -->
+                    <div class="bg-accent/10 rounded-2xl p-6 md:p-8">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-accent/20 rounded-full flex items-center justify-center flex-shrink-0">
+                                <span class="material-symbols-outlined text-accent text-xl">schedule</span>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-slate-900 dark:text-white mb-2">返信について</h4>
+                                <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                                    通常2営業日以内にご返信いたします。お急ぎの場合は、メールに「至急」とご記載ください。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="bg-white dark:bg-zinc-900 rounded-2xl soft-shadow border border-slate-100 dark:border-slate-800 p-6 md:p-8">
+                        <h3 class="text-lg md:text-xl font-serif text-slate-900 dark:text-white mb-4">SNSでフォロー</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 mb-4">
+                            キャリアに関するヒントや最新情報を発信しています。
+                        </p>
+                        <div class="flex gap-3">
+                            <a href="#" class="w-12 h-12 bg-slate-100 dark:bg-zinc-800 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
+                                <span class="material-symbols-outlined">social_leaderboard</span>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-slate-100 dark:bg-zinc-800 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
+                                <span class="material-symbols-outlined">alternate_email</span>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-slate-100 dark:bg-zinc-800 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
+                                <span class="material-symbols-outlined">photo_camera</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="py-12 md:py-16 bg-white dark:bg-zinc-900">
+        <div class="max-w-7xl mx-auto px-5 md:px-6 lg:px-8">
+            <div class="text-center mb-10">
+                <h2 class="text-xs md:text-sm font-display font-bold tracking-widest text-accent mb-3">LOCATION</h2>
+                <h3 class="text-2xl md:text-3xl font-serif text-slate-900 dark:text-white">アクセス</h3>
+            </div>
+            
+            <div class="bg-background-light dark:bg-zinc-800 rounded-2xl p-8 md:p-12 text-center">
+                <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <span class="material-symbols-outlined text-primary text-3xl">location_on</span>
+                </div>
+                <h4 class="text-lg font-serif text-slate-900 dark:text-white mb-2">株式会社いきかた</h4>
+                <p class="text-slate-600 dark:text-slate-400 text-sm mb-6">
+                    東京都渋谷区<br />
+                    （詳細な住所はお問い合わせ後にご案内いたします）
+                </p>
+                <p class="text-slate-500 dark:text-slate-400 text-sm">
+                    ※ セッションは主にオンライン（Zoom）で実施しております。<br />
+                    対面をご希望の場合は、お問い合わせ時にお知らせください。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-12 md:py-16">
+        <div class="px-5 md:px-6 lg:px-8 max-w-7xl mx-auto">
+            <div class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 lg:grid-cols-4 md:gap-8 lg:gap-12">
+                <div class="md:col-span-2 lg:col-span-2">
+                    <h2 class="text-xl md:text-2xl font-display text-white mb-4 md:mb-6 tracking-widest">株式会社いきかた</h2>
+                    <p class="mb-3 md:mb-4 text-sm">Ikikata Co., Ltd.</p>
+                    <p class="text-sm leading-relaxed max-w-sm">
+                        私たちは、出会ったひとの原体験を紐解きながら、一人ひとりがキャリアを自創するきっかけにしていただくことを支援するパートナーです。
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4 md:mb-6 text-sm md:text-base">Contact</h4>
+                    <p class="text-sm mb-2">Email: t.shinmi@ikikata.co.jp</p>
+                    <p class="text-sm mb-4 md:mb-6">Web: www.ikikata.co.jp</p>
+                    <div class="flex gap-4">
+                        <a class="hover:text-white transition-colors p-1" href="#"><span class="material-symbols-outlined text-xl">social_leaderboard</span></a>
+                        <a class="hover:text-white transition-colors p-1" href="#"><span class="material-symbols-outlined text-xl">alternate_email</span></a>
+                        <a class="hover:text-white transition-colors p-1" href="#"><span class="material-symbols-outlined text-xl">photo_camera</span></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4 md:mb-6 text-sm md:text-base">Links</h4>
+                    <ul class="text-sm space-y-3">
+                        <li><a class="hover:text-white transition-colors" href="#">Privacy Policy</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">Terms of Service</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">Recruit</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 mt-10 md:mt-16 pt-6 md:pt-8 flex flex-col md:flex-row justify-between items-center gap-3 md:gap-4 text-center md:text-left">
+                <p class="text-xs">© 2026 Ikikata Co., Ltd. All rights reserved.</p>
+                <p class="text-xs font-serif tracking-widest italic">Soulful Professionalism</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Services | 株式会社いきかた</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&amp;family=Zen+Old+Mincho:wght@400;700&amp;family=Inter:wght@300;400;600&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#3d5a80",
+                        accent: "#ee6c4d",
+                        "background-light": "#faf9f6",
+                        "background-dark": "#1a1a1a",
+                        "service-blue": "#2f4858",
+                        "service-green": "#84a59d",
+                        "service-brown": "#b58863",
+                    },
+                    fontFamily: {
+                        display: ["Zen Old Mincho", "serif"],
+                        serif: ["Noto Serif JP", "serif"],
+                        sans: ["Inter", "sans-serif"],
+                    },
+                },
+            },
+        };
+    </script>
+    <style type="text/tailwindcss">
+        .soft-shadow {
+            box-shadow: 0 10px 30px -10px rgba(0,0,0,0.05);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        @media (max-width: 768px) {
+            a, button {
+                min-height: 44px;
+                display: inline-flex;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200 font-sans transition-colors duration-300">
+
+    <!-- Header -->
+    <header class="fixed w-full top-0 z-50 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm border-b border-slate-200/50 dark:border-slate-800/50">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 h-16 md:h-20 flex items-center justify-between">
+            <a href="index-mobile-first.html" class="flex items-center">
+                <img src="https://storage.googleapis.com/website_data_shinmi/logo.png" alt="株式会社いきかた" class="h-10 md:h-16 lg:h-20 w-auto" />
+            </a>
+            <nav class="hidden md:flex items-center gap-6 lg:gap-10">
+                <a class="text-sm font-medium hover:text-accent transition-colors" href="index-mobile-first.html">Home</a>
+                <a class="text-sm font-medium hover:text-accent transition-colors" href="about.html">About</a>
+                <a class="text-sm font-medium text-accent transition-colors" href="services.html">Services</a>
+                <a class="px-5 py-2.5 bg-primary text-white text-sm font-semibold rounded-full hover:shadow-lg transition-all" href="contact.html">Contact</a>
+            </nav>
+            <button id="mobile-menu-btn" class="md:hidden p-2 -mr-2 text-primary dark:text-white" aria-label="メニューを開く">
+                <span class="material-symbols-outlined text-2xl">menu</span>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="fixed inset-0 bg-background-light dark:bg-background-dark z-[100] flex flex-col translate-x-full transition-transform duration-300 ease-out md:hidden">
+            <div class="flex items-center justify-between px-4 h-16 border-b border-slate-200/50 dark:border-slate-800/50">
+                <img src="https://storage.googleapis.com/website_data_shinmi/logo.png" alt="株式会社いきかた" class="h-10 w-auto" />
+                <button id="mobile-close-btn" class="p-2 -mr-2 text-primary dark:text-white" aria-label="メニューを閉じる">
+                    <span class="material-symbols-outlined text-2xl">close</span>
+                </button>
+            </div>
+            <nav class="flex-1 flex flex-col items-center justify-center gap-8 px-6">
+                <a class="text-xl font-display text-slate-900 dark:text-white" href="index-mobile-first.html" onclick="toggleMenu()">Home</a>
+                <a class="text-xl font-display text-slate-900 dark:text-white" href="about.html" onclick="toggleMenu()">About</a>
+                <a class="text-xl font-display text-accent" href="services.html" onclick="toggleMenu()">Services</a>
+                <a class="mt-4 px-8 py-3 bg-primary text-white text-base font-semibold rounded-full" href="contact.html" onclick="toggleMenu()">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('translate-x-full');
+            document.body.classList.toggle('overflow-hidden');
+        }
+        document.getElementById('mobile-menu-btn').addEventListener('click', toggleMenu);
+        document.getElementById('mobile-close-btn').addEventListener('click', toggleMenu);
+    </script>
+
+    <!-- Page Hero -->
+    <section class="pt-24 md:pt-32 pb-12 md:pb-16 bg-background-light dark:bg-background-dark">
+        <div class="max-w-7xl mx-auto px-5 md:px-6 lg:px-8">
+            <p class="text-accent font-display font-semibold tracking-[0.15em] mb-2 text-xs md:text-sm">SERVICES</p>
+            <h1 class="text-3xl md:text-5xl lg:text-6xl font-display leading-tight text-slate-900 dark:text-white mb-4">
+                サービス一覧
+            </h1>
+            <p class="text-slate-600 dark:text-slate-400 text-base md:text-lg max-w-2xl">
+                あなたの「いきかた」に寄り添う3つのサービスをご用意しています。
+            </p>
+        </div>
+    </section>
+
+    <!-- Service 1: Career Coaching -->
+    <section id="career-coaching" class="py-16 md:py-24 bg-white dark:bg-zinc-900">
+        <div class="max-w-7xl mx-auto px-5 md:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+                <div>
+                    <div class="w-16 h-16 md:w-20 md:h-20 bg-service-blue/10 rounded-full flex items-center justify-center mb-6">
+                        <span class="material-symbols-outlined text-service-blue text-3xl md:text-4xl">explore</span>
+                    </div>
+                    <h2 class="text-xs md:text-sm font-display font-bold tracking-widest text-service-blue mb-3">SERVICE 01</h2>
+                    <h3 class="text-2xl md:text-3xl lg:text-4xl font-serif leading-tight mb-6 text-slate-900 dark:text-white">
+                        Career Coaching
+                    </h3>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-6 text-sm md:text-base">
+                        現在のキャリアに対する違和感を解消し、自分らしい目的地を見定めるためのパーソナルセッションです。「何がしたいかわからない」「今の仕事にモヤモヤがある」そんな方に最適です。
+                    </p>
+                    
+                    <div class="space-y-4 mb-8">
+                        <h4 class="font-bold text-slate-900 dark:text-white text-sm">こんな方におすすめ</h4>
+                        <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-400">
+                            <li class="flex items-start gap-2">
+                                <span class="material-symbols-outlined text-service-blue text-[18px] mt-0.5">check_circle</span>
+                                <span>今の仕事に違和感があるが、何がしたいかわからない</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="material-symbols-outlined text-service-blue text-[18px] mt-0.5">check_circle</span>
+                                <span>転職を考えているが、軸が定まらない</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="material-symbols-outlined text-service-blue text-[18px] mt-0.5">check_circle</span>
+                                <span>自分の強みを言語化したい</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="material-symbols-outlined text-service-blue text-[18px] mt-0.5">check_circle</span>
+                                <span>中長期的なキャリアビジョンを描きたい</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-slate-50 dark:bg-zinc-800 rounded-xl p-6 mb-8">
+                        <h4 class="font-bold text-slate-900 dark:text-white text-sm mb-4">プログラム内容</h4>
+                        <div class="grid grid-cols-2 gap-4 text-sm">
+                            <div>
+                                <p class="text-slate-500 dark:text-slate-400">期間</p>
+                                <p class="text-slate-900 dark:text-white font-medium">3ヶ月〜</p>
+                            </div>
+                            <div>
+                                <p class="text-slate-500 dark:text-slate-400">セッション</p>
+                                <p class="text-slate-900 dark:text-white font-medium">月2回（各60分）</p>
+                            </div>
+                            <div>
+                                <p class="text-slate-500 dark:text-slate-400">形式</p>
+                                <p class="text-slate-900 dark:text-white font-medium">オンライン / 対面</p>
+                            </div>
+                            <div>
+                                <p class="text-slate-500 dark:text-slate-400">料金</p>
+                                <p class="text-slate-900 dark:text-white font-medium">¥50,000〜/月</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="contact.html" class="inline-flex items-center gap-2 px-6 py-3 bg-service-blue text-white font-bold rounded-full hover:shadow-lg transition-all text-sm">
+                        無料相談を予約
+                        <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    </a>
+                </div>
+                
+                <div class="relative">
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Career Coaching Session" class="w-full h-full object-cover" loading="lazy" />
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 w-24 h-24 md:w-32 md:h-32 bg-service-blue/10 rounded-full -z-10"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service 2: Mindset Design -->
+    <section id="mindset-design" class="py-16 md:py-24 bg-background-light dark:bg-background-dark">
+        <div class="max-w-7xl mx-auto px-5 md:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+                <div class="order-2 md:order-1 relative">
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Mindset Design Workshop" class="w-full h-full object-cover" loading="lazy" />
+                    </div>
+                    <div class="absolute -bottom-6 -left-6 w-24 h-24 md:w-32 md:h-32 bg-service-green/10 rounded-full -z-10"></div>
+                </div>
+                
+                <div class="order-1 md:order-2">
+                    <div class="w-16 h-16 md:w-20 md:h-20 bg-service-green/10 rounded-full flex items-center justify-center mb-6">
+                        <span class="material-symbols-outlined text-service-green text-3xl md:text-4xl">psychology</span>
+                    </div>
+                    <h2 class="text-xs md:text-sm font-display font-bold tracking-widest text-service-green mb-3">SERVICE 02</h2>
+                    <h3 class="text-2xl md:text-3xl lg:text-4xl font-serif leading-tight mb-6 text-slate-900 dark:text-white">
+                        Mindset Design
+                    </h3>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-6 text-sm md:text-base">
+                        行動を妨げるマインドブロックを解き、しなやかで強固な「自分軸」を構築するワークショップです。頭ではわかっているのに行動できない、そんな自分を変えたい方へ。
+                    </p>
+                    
+                    <div class="space-y-4 mb-8">
+                        <h4 class="font-bold text-slate-900 dark:text-white text-sm">こんな方におすすめ</h4>
+                        <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-400">
+                            <li class="flex items-start gap-2">
+                                <span class="material-symbols-outlined text-service-green text-[18px] mt-0.5">check_circle</span>
+                                <span>周りの目が気になって自分らしくいられない</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="material-symbols-outlined text-service-green text-[18px] mt-0.5">check_circle</span>
+                                <span>自己肯定感を高めたい</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="material-symbols-outlined text-service-green text-[18px] mt-0.5">check_circle</span>
+                                <span>ストレスや不安をコントロールしたい</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="material-symbols-outlined text-service-green text-[18px] mt-0.5">check_circle</span>
+                                <span>新しい習慣を身につけたい</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white dark:bg-zinc-800 rounded-xl p-6 mb-8">
+                        <h4 class="font-bold text-slate-900 dark:text-white text-sm mb-4">プログラム内容</h4>
+                        <div class="grid grid-cols-2 gap-4 text-sm">
+                            <div>
+                                <p class="text-slate-500 dark:text-slate-400">期間</p>
+                                <p class="text-slate-900 dark:text-white font-medium">2ヶ月〜</p>
+                            </div>
+                            <div>
+                                <p class="text-slate-500 dark:text-slate-400">セッション</p>
+                                <p class="text-slate-900 dark:text-white font-medium">週1回（各90分）</p>
+                            </div>
+                            <div>
+                                <p class="text-slate-500 dark:text-slate-400">形式</p>
+                                <p class="text-slate-900 dark:text-white font-medium">グループ / 個人</p>
+                            </div>
+                            <div>
+                                <p class="text-slate-500 dark:text-slate-400">料金</p>
+                                <p class="text-slate-900 dark:text-white font-medium">¥30,000〜/月</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="contact.html" class="inline-flex items-center gap-2 px-6 py-3 bg-service-green text-white font-bold rounded-full hover:shadow-lg transition-all text-sm">
+                        無料相談を予約
+                        <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service 3: Personal Branding -->
+    <section id="personal-branding" class="py-16 md:py-24 bg-white dark:bg-zinc-900">
+        <div class="max-w-7xl mx-auto px-5 md:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+                <div>
+                    <div class="w-16 h-16 md:w-20 md:h-20 bg-service-brown/10 rounded-full flex items-center justify-center mb-6">
+                        <span class="material-symbols-outlined text-service-brown text-3xl md:text-4xl">auto_awesome</span>
+                    </div>
+                    <h2 class="text-xs md:text-sm font-display font-bold tracking-widest text-service-brown mb-3">SERVICE 03</h2>
+                    <h3 class="text-2xl md:text-3xl lg:text-4xl font-serif leading-tight mb-6 text-slate-900 dark:text-white">
+                        Personal Branding
+                    </h3>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-6 text-sm md:text-base">
+                        フリーランスや複業を考える方へ。あなただけの「選ばれる理由」を抽出し、社会へ届けるサポートをします。自分の価値を正しく伝え、理想のクライアントと繋がりましょう。
+                    </p>
+                    
+                    <div class="space-y-4 mb-8">
+                        <h4 class="font-bold text-slate-900 dark:text-white text-sm">こんな方におすすめ</h4>
+                        <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-400">
+                            <li class="flex items-start gap-2">
+                                <span class="material-symbols-outlined text-service-brown text-[18px] mt-0.5">check_circle</span>
+                                <span>独立・起業を考えている</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="material-symbols-outlined text-service-brown text-[18px] mt-0.5">check_circle</span>
+                                <span>副業・複業を始めたい</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="material-symbols-outlined text-service-brown text-[18px] mt-0.5">check_circle</span>
+                                <span>自分の専門性を発信したい</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="material-symbols-outlined text-service-brown text-[18px] mt-0.5">check_circle</span>
+                                <span>SNSやWebでの発信を強化したい</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-slate-50 dark:bg-zinc-800 rounded-xl p-6 mb-8">
+                        <h4 class="font-bold text-slate-900 dark:text-white text-sm mb-4">プログラム内容</h4>
+                        <div class="grid grid-cols-2 gap-4 text-sm">
+                            <div>
+                                <p class="text-slate-500 dark:text-slate-400">期間</p>
+                                <p class="text-slate-900 dark:text-white font-medium">3ヶ月〜</p>
+                            </div>
+                            <div>
+                                <p class="text-slate-500 dark:text-slate-400">セッション</p>
+                                <p class="text-slate-900 dark:text-white font-medium">月2回（各60分）</p>
+                            </div>
+                            <div>
+                                <p class="text-slate-500 dark:text-slate-400">形式</p>
+                                <p class="text-slate-900 dark:text-white font-medium">オンライン</p>
+                            </div>
+                            <div>
+                                <p class="text-slate-500 dark:text-slate-400">料金</p>
+                                <p class="text-slate-900 dark:text-white font-medium">¥60,000〜/月</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="contact.html" class="inline-flex items-center gap-2 px-6 py-3 bg-service-brown text-white font-bold rounded-full hover:shadow-lg transition-all text-sm">
+                        無料相談を予約
+                        <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    </a>
+                </div>
+                
+                <div class="relative">
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1552581234-26160f608093?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Personal Branding" class="w-full h-full object-cover" loading="lazy" />
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 w-24 h-24 md:w-32 md:h-32 bg-service-brown/10 rounded-full -z-10"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="py-16 md:py-24 bg-background-light dark:bg-background-dark">
+        <div class="max-w-7xl mx-auto px-5 md:px-6 lg:px-8">
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="text-xs md:text-sm font-display font-bold tracking-widest text-accent mb-3">FLOW</h2>
+                <h3 class="text-2xl md:text-3xl lg:text-4xl font-serif text-slate-900 dark:text-white">
+                    ご利用の流れ
+                </h3>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-6 md:gap-4">
+                <!-- Step 1 -->
+                <div class="relative">
+                    <div class="bg-white dark:bg-zinc-900 p-6 rounded-2xl soft-shadow border border-slate-100 dark:border-slate-800 h-full">
+                        <div class="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center font-bold mb-4">1</div>
+                        <h4 class="text-lg font-serif mb-2 text-slate-900 dark:text-white">無料相談</h4>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                            まずは30分の無料カウンセリングで、現状のお悩みをお聞かせください。
+                        </p>
+                    </div>
+                    <div class="hidden md:block absolute top-1/2 -right-2 transform -translate-y-1/2 text-slate-300">
+                        <span class="material-symbols-outlined">chevron_right</span>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="relative">
+                    <div class="bg-white dark:bg-zinc-900 p-6 rounded-2xl soft-shadow border border-slate-100 dark:border-slate-800 h-full">
+                        <div class="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center font-bold mb-4">2</div>
+                        <h4 class="text-lg font-serif mb-2 text-slate-900 dark:text-white">プラン提案</h4>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                            ご状況に合わせた最適なサービス・プランをご提案いたします。
+                        </p>
+                    </div>
+                    <div class="hidden md:block absolute top-1/2 -right-2 transform -translate-y-1/2 text-slate-300">
+                        <span class="material-symbols-outlined">chevron_right</span>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="relative">
+                    <div class="bg-white dark:bg-zinc-900 p-6 rounded-2xl soft-shadow border border-slate-100 dark:border-slate-800 h-full">
+                        <div class="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center font-bold mb-4">3</div>
+                        <h4 class="text-lg font-serif mb-2 text-slate-900 dark:text-white">セッション開始</h4>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                            ご契約後、定期的なセッションとサポートがスタートします。
+                        </p>
+                    </div>
+                    <div class="hidden md:block absolute top-1/2 -right-2 transform -translate-y-1/2 text-slate-300">
+                        <span class="material-symbols-outlined">chevron_right</span>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="relative">
+                    <div class="bg-white dark:bg-zinc-900 p-6 rounded-2xl soft-shadow border border-slate-100 dark:border-slate-800 h-full">
+                        <div class="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center font-bold mb-4">4</div>
+                        <h4 class="text-lg font-serif mb-2 text-slate-900 dark:text-white">継続サポート</h4>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                            プログラム終了後も、必要に応じてフォローアップをご用意しています。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 md:py-24 bg-white dark:bg-zinc-900">
+        <div class="max-w-3xl mx-auto px-5 md:px-6 lg:px-8">
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="text-xs md:text-sm font-display font-bold tracking-widest text-accent mb-3">FAQ</h2>
+                <h3 class="text-2xl md:text-3xl lg:text-4xl font-serif text-slate-900 dark:text-white">
+                    よくあるご質問
+                </h3>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <details class="group bg-background-light dark:bg-zinc-800 rounded-xl">
+                    <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none">
+                        <span class="font-medium text-slate-900 dark:text-white text-sm md:text-base pr-4">無料相談ではどのようなことができますか？</span>
+                        <span class="material-symbols-outlined text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+                    </summary>
+                    <div class="px-5 md:px-6 pb-5 md:pb-6 text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                        30分の無料カウンセリングでは、現在のお悩みやご状況をお伺いし、最適なサービスのご提案をいたします。この時点で契約の義務はありませんので、お気軽にご相談ください。
+                    </div>
+                </details>
+
+                <!-- FAQ 2 -->
+                <details class="group bg-background-light dark:bg-zinc-800 rounded-xl">
+                    <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none">
+                        <span class="font-medium text-slate-900 dark:text-white text-sm md:text-base pr-4">オンラインでのセッションは可能ですか？</span>
+                        <span class="material-symbols-outlined text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+                    </summary>
+                    <div class="px-5 md:px-6 pb-5 md:pb-6 text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                        はい、すべてのサービスでオンラインセッション（Zoom）に対応しています。全国どこからでもご利用いただけます。
+                    </div>
+                </details>
+
+                <!-- FAQ 3 -->
+                <details class="group bg-background-light dark:bg-zinc-800 rounded-xl">
+                    <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none">
+                        <span class="font-medium text-slate-900 dark:text-white text-sm md:text-base pr-4">途中解約はできますか？</span>
+                        <span class="material-symbols-outlined text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+                    </summary>
+                    <div class="px-5 md:px-6 pb-5 md:pb-6 text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                        はい、1ヶ月前にお申し出いただければ、途中解約が可能です。詳細は契約時にご説明いたします。
+                    </div>
+                </details>
+
+                <!-- FAQ 4 -->
+                <details class="group bg-background-light dark:bg-zinc-800 rounded-xl">
+                    <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none">
+                        <span class="font-medium text-slate-900 dark:text-white text-sm md:text-base pr-4">どのサービスを選べばいいかわかりません</span>
+                        <span class="material-symbols-outlined text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+                    </summary>
+                    <div class="px-5 md:px-6 pb-5 md:pb-6 text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                        まずは無料相談にお越しください。ご状況やご希望をお伺いした上で、最適なサービスをご提案いたします。複数のサービスを組み合わせることも可能です。
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 md:py-24 bg-primary text-white">
+        <div class="max-w-4xl mx-auto px-5 md:px-6 lg:px-8 text-center">
+            <h2 class="text-2xl md:text-3xl lg:text-4xl font-serif mb-4 md:mb-6">
+                まずは無料相談から<br class="md:hidden" />始めてみませんか？
+            </h2>
+            <p class="text-white/80 mb-8 max-w-xl mx-auto text-sm md:text-base">
+                30分の無料カウンセリングで、あなたのお悩みをお聞かせください。
+            </p>
+            <a href="contact.html" class="inline-flex items-center gap-2 px-8 py-4 bg-white text-primary font-bold rounded-full hover:shadow-xl transition-all">
+                無料相談を予約する
+                <span class="material-symbols-outlined text-sm">arrow_forward</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-12 md:py-16">
+        <div class="px-5 md:px-6 lg:px-8 max-w-7xl mx-auto">
+            <div class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 lg:grid-cols-4 md:gap-8 lg:gap-12">
+                <div class="md:col-span-2 lg:col-span-2">
+                    <h2 class="text-xl md:text-2xl font-display text-white mb-4 md:mb-6 tracking-widest">株式会社いきかた</h2>
+                    <p class="mb-3 md:mb-4 text-sm">Ikikata Co., Ltd.</p>
+                    <p class="text-sm leading-relaxed max-w-sm">
+                        私たちは、出会ったひとの原体験を紐解きながら、一人ひとりがキャリアを自創するきっかけにしていただくことを支援するパートナーです。
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4 md:mb-6 text-sm md:text-base">Contact</h4>
+                    <p class="text-sm mb-2">Email: t.shinmi@ikikata.co.jp</p>
+                    <p class="text-sm mb-4 md:mb-6">Web: www.ikikata.co.jp</p>
+                    <div class="flex gap-4">
+                        <a class="hover:text-white transition-colors p-1" href="#"><span class="material-symbols-outlined text-xl">social_leaderboard</span></a>
+                        <a class="hover:text-white transition-colors p-1" href="#"><span class="material-symbols-outlined text-xl">alternate_email</span></a>
+                        <a class="hover:text-white transition-colors p-1" href="#"><span class="material-symbols-outlined text-xl">photo_camera</span></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4 md:mb-6 text-sm md:text-base">Links</h4>
+                    <ul class="text-sm space-y-3">
+                        <li><a class="hover:text-white transition-colors" href="#">Privacy Policy</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">Terms of Service</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">Recruit</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 mt-10 md:mt-16 pt-6 md:pt-8 flex flex-col md:flex-row justify-between items-center gap-3 md:gap-4 text-center md:text-left">
+                <p class="text-xs">© 2026 Ikikata Co., Ltd. All rights reserved.</p>
+                <p class="text-xs font-serif tracking-widest italic">Soulful Professionalism</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
