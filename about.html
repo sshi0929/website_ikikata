@@ -51,19 +51,24 @@
     </style>
 </head>
 
-<body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200 font-sans transition-colors duration-300">
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200 font-sans transition-colors duration-300">
 
     <!-- Header -->
-    <header class="fixed w-full top-0 z-50 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm border-b border-slate-200/50 dark:border-slate-800/50">
+    <header
+        class="fixed w-full top-0 z-50 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm border-b border-slate-200/50 dark:border-slate-800/50">
         <div class="max-w-7xl mx-auto px-4 md:px-6 h-16 md:h-20 flex items-center justify-between">
             <a href="index-mobile-first.html" class="flex items-center">
-                <img src="https://storage.googleapis.com/website_data_shinmi/logo.png" alt="株式会社いきかた" class="h-10 md:h-16 lg:h-20 w-auto" />
+                <img src="https://storage.googleapis.com/website_data_shinmi/logo.png" alt="株式会社いきかた"
+                    class="h-10 md:h-16 lg:h-20 w-auto" />
             </a>
             <nav class="hidden md:flex items-center gap-6 lg:gap-10">
-                <a class="text-sm font-medium hover:text-accent transition-colors" href="index-mobile-first.html">Home</a>
+                <a class="text-sm font-medium hover:text-accent transition-colors"
+                    href="index-mobile-first.html">Home</a>
                 <a class="text-sm font-medium text-accent transition-colors" href="about.html">About</a>
                 <a class="text-sm font-medium hover:text-accent transition-colors" href="services.html">Services</a>
-                <a class="px-5 py-2.5 bg-primary text-white text-sm font-semibold rounded-full hover:shadow-lg transition-all" href="contact.html">Contact</a>
+                <a class="px-5 py-2.5 bg-primary text-white text-sm font-semibold rounded-full hover:shadow-lg transition-all"
+                    href="contact.html">Contact</a>
             </nav>
             <button id="mobile-menu-btn" class="md:hidden p-2 -mr-2 text-primary dark:text-white" aria-label="メニューを開く">
                 <span class="material-symbols-outlined text-2xl">menu</span>
@@ -71,18 +76,24 @@
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="fixed inset-0 bg-background-light dark:bg-background-dark z-[100] flex flex-col translate-x-full transition-transform duration-300 ease-out md:hidden">
-            <div class="flex items-center justify-between px-4 h-16 border-b border-slate-200/50 dark:border-slate-800/50">
-                <img src="https://storage.googleapis.com/website_data_shinmi/logo.png" alt="株式会社いきかた" class="h-10 w-auto" />
+        <div id="mobile-menu"
+            class="fixed inset-0 bg-background-light dark:bg-background-dark z-[100] flex flex-col translate-x-full transition-transform duration-300 ease-out md:hidden">
+            <div
+                class="flex items-center justify-between px-4 h-16 border-b border-slate-200/50 dark:border-slate-800/50">
+                <img src="https://storage.googleapis.com/website_data_shinmi/logo.png" alt="株式会社いきかた"
+                    class="h-10 w-auto" />
                 <button id="mobile-close-btn" class="p-2 -mr-2 text-primary dark:text-white" aria-label="メニューを閉じる">
                     <span class="material-symbols-outlined text-2xl">close</span>
                 </button>
             </div>
             <nav class="flex-1 flex flex-col items-center justify-center gap-8 px-6">
-                <a class="text-xl font-display text-slate-900 dark:text-white" href="index-mobile-first.html" onclick="toggleMenu()">Home</a>
+                <a class="text-xl font-display text-slate-900 dark:text-white" href="index-mobile-first.html"
+                    onclick="toggleMenu()">Home</a>
                 <a class="text-xl font-display text-accent" href="about.html" onclick="toggleMenu()">About</a>
-                <a class="text-xl font-display text-slate-900 dark:text-white" href="services.html" onclick="toggleMenu()">Services</a>
-                <a class="mt-4 px-8 py-3 bg-primary text-white text-base font-semibold rounded-full" href="contact.html" onclick="toggleMenu()">Contact</a>
+                <a class="text-xl font-display text-slate-900 dark:text-white" href="services.html"
+                    onclick="toggleMenu()">Services</a>
+                <a class="mt-4 px-8 py-3 bg-primary text-white text-base font-semibold rounded-full" href="contact.html"
+                    onclick="toggleMenu()">Contact</a>
             </nav>
         </div>
     </header>
@@ -115,8 +126,10 @@
         <div class="max-w-7xl mx-auto px-5 md:px-6 lg:px-8">
             <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
                 <div>
-                    <h2 class="text-xs md:text-sm font-display font-bold tracking-widest text-accent mb-3">PHILOSOPHY</h2>
-                    <h3 class="text-2xl md:text-3xl lg:text-4xl font-serif leading-tight mb-6 text-slate-900 dark:text-white">
+                    <h2 class="text-xs md:text-sm font-display font-bold tracking-widest text-accent mb-3">PHILOSOPHY
+                    </h2>
+                    <h3
+                        class="text-2xl md:text-3xl lg:text-4xl font-serif leading-tight mb-6 text-slate-900 dark:text-white">
                         「生きる」と「働く」を<br />一つにする
                     </h3>
                     <div class="space-y-4 text-slate-600 dark:text-slate-400 leading-relaxed text-sm md:text-base">
@@ -133,9 +146,11 @@
                 </div>
                 <div class="relative">
                     <div class="aspect-[4/3] rounded-2xl overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Team collaboration" class="w-full h-full object-cover" loading="lazy" />
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                            alt="Team collaboration" class="w-full h-full object-cover" loading="lazy" />
                     </div>
-                    <div class="absolute -bottom-6 -left-6 w-24 h-24 md:w-32 md:h-32 bg-accent/10 rounded-full -z-10"></div>
+                    <div class="absolute -bottom-6 -left-6 w-24 h-24 md:w-32 md:h-32 bg-accent/10 rounded-full -z-10">
+                    </div>
                 </div>
             </div>
         </div>
@@ -153,7 +168,8 @@
 
             <div class="grid md:grid-cols-3 gap-6 md:gap-8">
                 <!-- Value 1 -->
-                <div class="bg-white dark:bg-zinc-900 p-6 md:p-8 rounded-2xl soft-shadow border border-slate-100 dark:border-slate-800">
+                <div
+                    class="bg-white dark:bg-zinc-900 p-6 md:p-8 rounded-2xl soft-shadow border border-slate-100 dark:border-slate-800">
                     <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-5">
                         <span class="material-symbols-outlined text-primary text-2xl">favorite</span>
                     </div>
@@ -164,7 +180,8 @@
                 </div>
 
                 <!-- Value 2 -->
-                <div class="bg-white dark:bg-zinc-900 p-6 md:p-8 rounded-2xl soft-shadow border border-slate-100 dark:border-slate-800">
+                <div
+                    class="bg-white dark:bg-zinc-900 p-6 md:p-8 rounded-2xl soft-shadow border border-slate-100 dark:border-slate-800">
                     <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-5">
                         <span class="material-symbols-outlined text-primary text-2xl">handshake</span>
                     </div>
@@ -175,7 +192,8 @@
                 </div>
 
                 <!-- Value 3 -->
-                <div class="bg-white dark:bg-zinc-900 p-6 md:p-8 rounded-2xl soft-shadow border border-slate-100 dark:border-slate-800">
+                <div
+                    class="bg-white dark:bg-zinc-900 p-6 md:p-8 rounded-2xl soft-shadow border border-slate-100 dark:border-slate-800">
                     <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-5">
                         <span class="material-symbols-outlined text-primary text-2xl">psychology_alt</span>
                     </div>
@@ -194,11 +212,12 @@
             <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
                 <div class="order-2 md:order-1">
                     <h2 class="text-xs md:text-sm font-display font-bold tracking-widest text-accent mb-3">代表取締役</h2>
-                    <h3 class="text-2xl md:text-3xl lg:text-4xl font-serif leading-tight mb-2 text-slate-900 dark:text-white">
+                    <h3
+                        class="text-2xl md:text-3xl lg:text-4xl font-serif leading-tight mb-2 text-slate-900 dark:text-white">
                         新見 貴之
                     </h3>
                     <p class="text-slate-500 dark:text-slate-400 mb-6 text-sm">Takayuki Shinmi / 代表取締役</p>
-                    
+
                     <div class="space-y-4 text-slate-600 dark:text-slate-400 leading-relaxed text-sm md:text-base">
                         <p>
                             企業での10年間のキャリアを経て、「本当にやりたいこと」を見つめ直すために独立。自身の経験から、多くの人が同じような悩みを抱えていることに気づき、株式会社いきかたを設立。
@@ -209,17 +228,22 @@
                     </div>
 
                     <div class="mt-8 flex flex-wrap gap-3">
-                        <span class="px-4 py-2 bg-slate-100 dark:bg-zinc-800 rounded-full text-xs text-slate-600 dark:text-slate-400">国家資格キャリアコンサルタント</span>
-                        <span class="px-4 py-2 bg-slate-100 dark:bg-zinc-800 rounded-full text-xs text-slate-600 dark:text-slate-400">産業カウンセラー</span>
-                        <span class="px-4 py-2 bg-slate-100 dark:bg-zinc-800 rounded-full text-xs text-slate-600 dark:text-slate-400">コーチング資格</span>
+                        <span
+                            class="px-4 py-2 bg-slate-100 dark:bg-zinc-800 rounded-full text-xs text-slate-600 dark:text-slate-400">国家資格キャリアコンサルタント</span>
+                        <span
+                            class="px-4 py-2 bg-slate-100 dark:bg-zinc-800 rounded-full text-xs text-slate-600 dark:text-slate-400">産業カウンセラー</span>
+                        <span
+                            class="px-4 py-2 bg-slate-100 dark:bg-zinc-800 rounded-full text-xs text-slate-600 dark:text-slate-400">コーチング資格</span>
                     </div>
                 </div>
-                
+
                 <div class="order-1 md:order-2 relative">
                     <div class="aspect-[3/4] max-w-sm mx-auto md:max-w-none rounded-2xl overflow-hidden">
-                        <img src="https://storage.googleapis.com/website_data_shinmi/user_main.jpeg" alt="新見 貴之" class="w-full h-full object-cover object-top" loading="lazy" />
+                        <img src="https://storage.googleapis.com/website_data_shinmi/user_main.png" alt="新見 貴之"
+                            class="w-full h-full object-cover object-top" loading="lazy" />
                     </div>
-                    <div class="absolute -top-6 -right-6 w-24 h-24 md:w-32 md:h-32 bg-primary/10 rounded-full -z-10"></div>
+                    <div class="absolute -top-6 -right-6 w-24 h-24 md:w-32 md:h-32 bg-primary/10 rounded-full -z-10">
+                    </div>
                 </div>
             </div>
         </div>
@@ -235,35 +259,43 @@
                 </h3>
             </div>
 
-            <div class="max-w-3xl mx-auto bg-white dark:bg-zinc-900 rounded-2xl soft-shadow border border-slate-100 dark:border-slate-800 overflow-hidden">
+            <div
+                class="max-w-3xl mx-auto bg-white dark:bg-zinc-900 rounded-2xl soft-shadow border border-slate-100 dark:border-slate-800 overflow-hidden">
                 <dl class="divide-y divide-slate-100 dark:divide-slate-800">
                     <div class="grid grid-cols-3 md:grid-cols-4 p-4 md:p-6">
                         <dt class="col-span-1 text-slate-500 dark:text-slate-400 text-sm">会社名</dt>
-                        <dd class="col-span-2 md:col-span-3 text-slate-900 dark:text-white text-sm md:text-base">株式会社いきかた</dd>
+                        <dd class="col-span-2 md:col-span-3 text-slate-900 dark:text-white text-sm md:text-base">
+                            株式会社いきかた</dd>
                     </div>
                     <div class="grid grid-cols-3 md:grid-cols-4 p-4 md:p-6">
                         <dt class="col-span-1 text-slate-500 dark:text-slate-400 text-sm">英文名</dt>
-                        <dd class="col-span-2 md:col-span-3 text-slate-900 dark:text-white text-sm md:text-base">Ikikata Co., Ltd.</dd>
+                        <dd class="col-span-2 md:col-span-3 text-slate-900 dark:text-white text-sm md:text-base">Ikikata
+                            Co., Ltd.</dd>
                     </div>
                     <div class="grid grid-cols-3 md:grid-cols-4 p-4 md:p-6">
                         <dt class="col-span-1 text-slate-500 dark:text-slate-400 text-sm">設立</dt>
-                        <dd class="col-span-2 md:col-span-3 text-slate-900 dark:text-white text-sm md:text-base">2025年12月</dd>
+                        <dd class="col-span-2 md:col-span-3 text-slate-900 dark:text-white text-sm md:text-base">
+                            2025年12月</dd>
                     </div>
                     <div class="grid grid-cols-3 md:grid-cols-4 p-4 md:p-6">
                         <dt class="col-span-1 text-slate-500 dark:text-slate-400 text-sm">代表者</dt>
-                        <dd class="col-span-2 md:col-span-3 text-slate-900 dark:text-white text-sm md:text-base">新見 貴之</dd>
+                        <dd class="col-span-2 md:col-span-3 text-slate-900 dark:text-white text-sm md:text-base">新見 貴之
+                        </dd>
                     </div>
                     <div class="grid grid-cols-3 md:grid-cols-4 p-4 md:p-6">
                         <dt class="col-span-1 text-slate-500 dark:text-slate-400 text-sm">事業内容</dt>
-                        <dd class="col-span-2 md:col-span-3 text-slate-900 dark:text-white text-sm md:text-base">キャリアコーチング、研修・ワークショップ、パーソナルブランディング支援</dd>
+                        <dd class="col-span-2 md:col-span-3 text-slate-900 dark:text-white text-sm md:text-base">
+                            キャリアコーチング、研修・ワークショップ、パーソナルブランディング支援</dd>
                     </div>
                     <div class="grid grid-cols-3 md:grid-cols-4 p-4 md:p-6">
                         <dt class="col-span-1 text-slate-500 dark:text-slate-400 text-sm">所在地</dt>
-                        <dd class="col-span-2 md:col-span-3 text-slate-900 dark:text-white text-sm md:text-base">XXXXXXX</dd>
+                        <dd class="col-span-2 md:col-span-3 text-slate-900 dark:text-white text-sm md:text-base">XXXXXXX
+                        </dd>
                     </div>
                     <div class="grid grid-cols-3 md:grid-cols-4 p-4 md:p-6">
                         <dt class="col-span-1 text-slate-500 dark:text-slate-400 text-sm">Email</dt>
-                        <dd class="col-span-2 md:col-span-3 text-slate-900 dark:text-white text-sm md:text-base">t.shinmi@ikikata.co.jp</dd>
+                        <dd class="col-span-2 md:col-span-3 text-slate-900 dark:text-white text-sm md:text-base">
+                            t.shinmi@ikikata.co.jp</dd>
                     </div>
                 </dl>
             </div>
@@ -279,7 +311,8 @@
             <p class="text-white/80 mb-8 max-w-xl mx-auto text-sm md:text-base">
                 まずは無料カウンセリングで、今のお悩みをお聞かせください。
             </p>
-            <a href="contact.html" class="inline-flex items-center gap-2 px-8 py-4 bg-white text-primary font-bold rounded-full hover:shadow-xl transition-all">
+            <a href="contact.html"
+                class="inline-flex items-center gap-2 px-8 py-4 bg-white text-primary font-bold rounded-full hover:shadow-xl transition-all">
                 無料相談を予約する
                 <span class="material-symbols-outlined text-sm">arrow_forward</span>
             </a>
@@ -302,9 +335,12 @@
                     <p class="text-sm mb-2">Email: t.shinmi@ikikata.co.jp</p>
                     <p class="text-sm mb-4 md:mb-6">Web: www.ikikata.co.jp</p>
                     <div class="flex gap-4">
-                        <a class="hover:text-white transition-colors p-1" href="#"><span class="material-symbols-outlined text-xl">social_leaderboard</span></a>
-                        <a class="hover:text-white transition-colors p-1" href="#"><span class="material-symbols-outlined text-xl">alternate_email</span></a>
-                        <a class="hover:text-white transition-colors p-1" href="#"><span class="material-symbols-outlined text-xl">photo_camera</span></a>
+                        <a class="hover:text-white transition-colors p-1" href="#"><span
+                                class="material-symbols-outlined text-xl">social_leaderboard</span></a>
+                        <a class="hover:text-white transition-colors p-1" href="#"><span
+                                class="material-symbols-outlined text-xl">alternate_email</span></a>
+                        <a class="hover:text-white transition-colors p-1" href="#"><span
+                                class="material-symbols-outlined text-xl">photo_camera</span></a>
                     </div>
                 </div>
                 <div>
@@ -316,7 +352,8 @@
                     </ul>
                 </div>
             </div>
-            <div class="border-t border-slate-800 mt-10 md:mt-16 pt-6 md:pt-8 flex flex-col md:flex-row justify-between items-center gap-3 md:gap-4 text-center md:text-left">
+            <div
+                class="border-t border-slate-800 mt-10 md:mt-16 pt-6 md:pt-8 flex flex-col md:flex-row justify-between items-center gap-3 md:gap-4 text-center md:text-left">
                 <p class="text-xs">© 2026 Ikikata Co., Ltd. All rights reserved.</p>
                 <p class="text-xs font-serif tracking-widest italic">Soulful Professionalism</p>
             </div>
@@ -324,4 +361,5 @@
     </footer>
 
 </body>
+
 </html>
