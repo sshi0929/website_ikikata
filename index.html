@@ -82,19 +82,19 @@
             width: auto;
         }
 
-        .nav {
+        .common-nav {
             display: flex;
             align-items: center;
             gap: 40px;
         }
 
-        .nav a {
+        .common-nav a {
             font-size: 14px;
             font-weight: 500;
             transition: color 0.3s;
         }
 
-        .nav a:hover {
+        .common-nav a:hover {
             color: #ee6c4d;
         }
 
@@ -124,11 +124,11 @@
         }
 
         @media (max-width: 768px) {
-            .nav {
+            .common-nav {
                 display: none;
             }
 
-            .nav.active {
+            .common-nav.active {
                 display: flex;
                 flex-direction: column;
                 position: fixed;
@@ -884,7 +884,7 @@
             <a href="#" class="logo">
                 <img src="logo-trans.png" alt="株式会社いきかた">
             </a>
-            <nav class="nav">
+            <nav class="common-nav">
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
                 <a href="services.html">Services</a>
@@ -1060,7 +1060,7 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const mobileToggle = document.querySelector('.mobile-nav-toggle');
-            const nav = document.querySelector('.nav');
+            const nav = document.querySelector('.common-nav');
             const toggleIcon = mobileToggle.querySelector('.material-symbols-outlined');
 
             mobileToggle.addEventListener('click', () => {

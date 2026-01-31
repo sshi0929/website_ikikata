@@ -41,13 +41,105 @@
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
+        
+        /* Header */
+        .header {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 50;
+            background-color: rgba(250, 249, 246, 0.95);
+            border-bottom: 1px solid rgba(226, 232, 240, 0.5);
+        }
+
+        .header-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 20px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo img {
+            height: 50px;
+            width: auto;
+        }
+
+        .common-nav {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .common-nav a {
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.3s;
+            color: #1e293b;
+            text-decoration: none;
+        }
+
+        .common-nav a:hover {
+            color: #ee6c4d;
+        }
+
+        .btn-header-primary {
+            padding: 10px 20px;
+            background-color: #3d5a80 !important;
+            color: white !important;
+            font-size: 14px;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .btn-header-primary:hover {
+            box-shadow: 0 10px 25px rgba(61, 90, 128, 0.3);
+            transform: translateY(-2px);
+        }
+
+        /* Mobile Nav */
+        .mobile-nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #3d5a80;
+        }
+
         @media (max-width: 768px) {
-            a, button {
-                min-height: 44px;
-                display: inline-flex;
-                align-items: center;
+            .common-nav {
+                display: none;
+            }
+
+            .common-nav.active {
+                display: flex;
+                flex-direction: column;
+                position: fixed;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: rgba(250, 249, 246, 0.98);
+                padding: 40px 20px;
+                gap: 30px;
+                border-bottom: 1px solid rgba(226, 232, 240, 0.1);
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+                z-index: 49;
+                text-align: center;
+            }
+
+            .mobile-nav-toggle {
+                display: block;
+            }
+
+            .logo img {
+                height: 40px;
             }
         }
+
         input:focus, textarea:focus, select:focus {
             outline: none;
             box-shadow: 0 0 0 2px rgba(61, 90, 128, 0.2);
@@ -58,56 +150,46 @@
 <body
     class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200 font-sans transition-colors duration-300">
 
-    <!-- Header -->
-    <header
-        class="fixed w-full top-0 z-50 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm border-b border-slate-200/50 dark:border-slate-800/50">
-        <div class="max-w-7xl mx-auto px-4 md:px-6 h-16 md:h-20 flex items-center justify-between">
-            <a href="index.html" class="flex items-center">
-                <img src="logo-trans.png" alt="株式会社いきかた" class="h-10 md:h-16 lg:h-20 w-auto" />
+    <header class="header">
+        <div class="header-inner">
+            <a href="index.html" class="logo">
+                <img src="logo-trans.png" alt="株式会社いきかた">
             </a>
-            <nav class="hidden md:flex items-center gap-6 lg:gap-10">
-                <a class="text-sm font-medium hover:text-accent transition-colors" href="index.html">Home</a>
-                <a class="text-sm font-medium hover:text-accent transition-colors" href="about.html">About</a>
-                <a class="text-sm font-medium hover:text-accent transition-colors" href="services.html">Services</a>
-                <a class="px-5 py-2.5 bg-primary text-white text-sm font-semibold rounded-full hover:shadow-lg transition-all"
-                    href="contact.html">Contact</a>
+            <nav class="common-nav">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html" class="btn-header-primary">Contact</a>
             </nav>
-            <button id="mobile-menu-btn" class="md:hidden p-2 -mr-2 text-primary dark:text-white" aria-label="メニューを開く">
-                <span class="material-symbols-outlined text-2xl">menu</span>
+            <button class="mobile-nav-toggle" aria-label="メニュー">
+                <span class="material-symbols-outlined">menu</span>
             </button>
-        </div>
-
-        <!-- Mobile Menu -->
-        <div id="mobile-menu"
-            class="fixed inset-0 bg-background-light dark:bg-background-dark z-[100] flex flex-col translate-x-full transition-transform duration-300 ease-out md:hidden">
-            <div
-                class="flex items-center justify-between px-4 h-16 border-b border-slate-200/50 dark:border-slate-800/50">
-                <img src="logo-trans.png" alt="株式会社いきかた" class="h-10 w-auto" />
-                <button id="mobile-close-btn" class="p-2 -mr-2 text-primary dark:text-white" aria-label="メニューを閉じる">
-                    <span class="material-symbols-outlined text-2xl">close</span>
-                </button>
-            </div>
-            <nav class="flex-1 flex flex-col items-center justify-center gap-8 px-6">
-                <a class="text-xl font-display text-slate-900 dark:text-white" href="index.html"
-                    onclick="toggleMenu()">Home</a>
-                <a class="text-xl font-display text-slate-900 dark:text-white" href="about.html"
-                    onclick="toggleMenu()">About</a>
-                <a class="text-xl font-display text-slate-900 dark:text-white" href="services.html"
-                    onclick="toggleMenu()">Services</a>
-                <a class="mt-4 px-8 py-3 bg-primary text-white text-base font-semibold rounded-full" href="contact.html"
-                    onclick="toggleMenu()">Contact</a>
-            </nav>
         </div>
     </header>
 
     <script>
-        function toggleMenu() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('translate-x-full');
-            document.body.classList.toggle('overflow-hidden');
-        }
-        document.getElementById('mobile-menu-btn').addEventListener('click', toggleMenu);
-        document.getElementById('mobile-close-btn').addEventListener('click', toggleMenu);
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileToggle = document.querySelector('.mobile-nav-toggle');
+            const nav = document.querySelector('.common-nav');
+            const toggleIcon = mobileToggle.querySelector('.material-symbols-outlined');
+
+            mobileToggle.addEventListener('click', () => {
+                nav.classList.toggle('active');
+                if (nav.classList.contains('active')) {
+                    toggleIcon.textContent = 'close';
+                } else {
+                    toggleIcon.textContent = 'menu';
+                }
+            });
+
+            // Close menu when clicking a link
+            nav.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    nav.classList.remove('active');
+                    toggleIcon.textContent = 'menu';
+                });
+            });
+        });
     </script>
 
     <!-- Page Hero -->
