@@ -128,6 +128,22 @@
                 display: none;
             }
 
+            .nav.active {
+                display: flex;
+                flex-direction: column;
+                position: fixed;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: rgba(250, 249, 246, 0.98);
+                padding: 40px 20px;
+                gap: 30px;
+                border-bottom: 1px solid rgba(226, 232, 240, 0.1);
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+                z-index: 49;
+                text-align: center;
+            }
+
             .mobile-nav-toggle {
                 display: block;
             }
@@ -869,7 +885,7 @@
                 <img src="logo-trans.png" alt="株式会社いきかた">
             </a>
             <nav class="nav">
-                <a href="#">Home</a>
+                <a href="index.html">Home</a>
                 <a href="about.html">About</a>
                 <a href="services.html">Services</a>
                 <a href="contact.html" class="btn-primary">Contact</a>
@@ -888,9 +904,9 @@
         <div class="hero-content">
             <div class="hero-content-inner">
                 <p class="hero-label">SOULFUL CAREER DESIGN</p>
-                <h1 class="hero-title">一人ひとりがキャリアを自創する<br>キッカケになる。</h1>
+                <h1 class="hero-title">一人ひとりがキャリアを自創するキッカケになる。</h1>
                 <p class="hero-description">私たちは、個人の原体験を紐解き、誰もが自分らしい「いきかた」を自ら創造できる社会を目指すキャリアデザイン・パートナーです。</p>
-                <a href="#services" class="btn-primary">サービスを見る <span class="material-symbols-outlined"
+                <a href="services.html" class="btn-primary">サービスを見る <span class="material-symbols-outlined"
                         style="font-size: 14px;">arrow_forward</span></a>
             </div>
         </div>
@@ -940,8 +956,8 @@
                     <li><span class="material-symbols-outlined"
                             style="font-size: 16px; color: #2f4858;">check_circle</span> 中長期ビジョン策定</li>
                 </ul>
-                <a href="#" class="service-link service-link-1">Learn More <span class="material-symbols-outlined"
-                        style="font-size: 14px;">arrow_forward</span></a>
+                <a href="services.html" class="service-link service-link-1">Learn More <span
+                        class="material-symbols-outlined" style="font-size: 14px;">arrow_forward</span></a>
             </div>
             <div class="service-card">
                 <div class="service-icon service-icon-2">
@@ -957,8 +973,8 @@
                     <li><span class="material-symbols-outlined"
                             style="font-size: 16px; color: #84a59d;">check_circle</span> 習慣化プログラム</li>
                 </ul>
-                <a href="#" class="service-link service-link-2">Learn More <span class="material-symbols-outlined"
-                        style="font-size: 14px;">arrow_forward</span></a>
+                <a href="services.html" class="service-link service-link-2">Learn More <span
+                        class="material-symbols-outlined" style="font-size: 14px;">arrow_forward</span></a>
             </div>
             <div class="service-card">
                 <div class="service-icon service-icon-3">
@@ -974,8 +990,8 @@
                     <li><span class="material-symbols-outlined"
                             style="font-size: 16px; color: #b58863;">check_circle</span> SNS・Web活用支援</li>
                 </ul>
-                <a href="#" class="service-link service-link-3">Learn More <span class="material-symbols-outlined"
-                        style="font-size: 14px;">arrow_forward</span></a>
+                <a href="services.html" class="service-link service-link-3">Learn More <span
+                        class="material-symbols-outlined" style="font-size: 14px;">arrow_forward</span></a>
             </div>
         </div>
         <div class="carousel-dots">
@@ -1041,6 +1057,30 @@
         </div>
     </footer>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileToggle = document.querySelector('.mobile-nav-toggle');
+            const nav = document.querySelector('.nav');
+            const toggleIcon = mobileToggle.querySelector('.material-symbols-outlined');
+
+            mobileToggle.addEventListener('click', () => {
+                nav.classList.toggle('active');
+                if (nav.classList.contains('active')) {
+                    toggleIcon.textContent = 'close';
+                } else {
+                    toggleIcon.textContent = 'menu';
+                }
+            });
+
+            // Close menu when clicking a link
+            nav.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    nav.classList.remove('active');
+                    toggleIcon.textContent = 'menu';
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
