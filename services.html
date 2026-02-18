@@ -44,6 +44,21 @@
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
+
+        .faq-tab {
+            background-color: #f1f5f9;
+            color: #64748b;
+            cursor: pointer;
+            border: none;
+        }
+        .faq-tab:hover {
+            background-color: #e2e8f0;
+            color: #334155;
+        }
+        .faq-tab.active {
+            background-color: #3d5a80;
+            color: white;
+        }
         
         /* Header */
         .header {
@@ -194,98 +209,83 @@
 
     <!-- Page Hero -->
     <section class="pt-24 md:pt-32 pb-12 md:pb-16 bg-background-light dark:bg-background-dark">
-        <div class="max-w-7xl mx-auto px-5 md:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto px-5 md:px-6 lg:px-8 text-center">
             <p class="text-accent font-display font-semibold tracking-[0.15em] mb-2 text-xs md:text-sm">SERVICES</p>
             <h1 class="text-3xl md:text-5xl lg:text-6xl font-display leading-tight text-slate-900 dark:text-white mb-4">
                 サービス一覧
             </h1>
-            <p class="text-slate-600 dark:text-slate-400 text-base md:text-lg max-w-2xl">
-                あなたの「いきかた」に寄り添う3つのサービスをご用意しています。
+            <p class="text-slate-600 dark:text-slate-400 text-base md:text-lg max-w-4xl mx-auto">
+                株式会社いきかたでは、代表・新見孝之のこれまでの経験を活かし、以下のサービスを提供しています。
             </p>
         </div>
     </section>
 
-    <!-- Service 1: Career Coaching -->
-    <section id="career-coaching" class="py-16 md:py-24 bg-white dark:bg-zinc-900">
-        <div class="max-w-7xl mx-auto px-5 md:px-6 lg:px-8">
-            <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
-                <div>
-                    <div
-                        class="w-16 h-16 md:w-20 md:h-20 bg-service-blue/10 rounded-full flex items-center justify-center mb-6">
-                        <span class="material-symbols-outlined text-service-blue text-3xl md:text-4xl">explore</span>
-                    </div>
-                    <h2 class="text-xs md:text-sm font-display font-bold tracking-widest text-service-blue mb-3">SERVICE
-                        01</h2>
-                    <h3
-                        class="text-2xl md:text-3xl lg:text-4xl font-serif leading-tight mb-6 text-slate-900 dark:text-white">
-                        Career Coaching
-                    </h3>
-                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-6 text-sm md:text-base">
-                        現在のキャリアに対する違和感を解消し、自分らしい目的地を見定めるためのパーソナルセッションです。「何がしたいかわからない」「今の仕事にモヤモヤがある」そんな方に最適です。
+    <!-- Service 1: 講演・セミナー -->
+    <section id="lecture" class="py-16 md:py-24 bg-white dark:bg-zinc-900">
+        <div class="max-w-6xl mx-auto px-5 md:px-6 lg:px-8">
+            <!-- Header (full width) -->
+            <div
+                class="w-16 h-16 md:w-20 md:h-20 bg-service-blue/10 rounded-full flex items-center justify-center mb-6">
+                <span class="material-symbols-outlined text-service-blue text-3xl md:text-4xl">campaign</span>
+            </div>
+            <h2 class="text-xs md:text-sm font-display font-bold tracking-widest text-service-blue mb-3">SERVICE 1</h2>
+            <h3 class="text-2xl md:text-3xl lg:text-4xl font-serif leading-tight mb-2 text-slate-900 dark:text-white">
+                講演・セミナー
+            </h3>
+            <p class="text-slate-900 dark:text-white font-bold mb-6 text-sm md:text-base">
+                多様な働き方の実践者
+            </p>
+
+            <!-- Two-column: text + carousel -->
+            <div class="flex flex-col lg:flex-row lg:gap-12 lg:items-start">
+                <!-- Left: Text content -->
+                <div class="lg:w-1/2">
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-8 text-sm md:text-base">
+                        就活での挫折、転職、単身赴任、育休・時短勤務、介護休業、副業・フリーランス・起業、3児の父、アンガーマネジメント、キャリアコンサルタントなど、自身の経験をテーマにお話しいたします。
                     </p>
 
                     <div class="space-y-4 mb-8">
-                        <h4 class="font-bold text-slate-900 dark:text-white text-sm">こんな方におすすめ</h4>
+                        <h4 class="font-bold text-slate-900 dark:text-white text-sm">こんな方におすすめ：</h4>
                         <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-400">
                             <li class="flex items-start gap-2">
                                 <span
                                     class="material-symbols-outlined text-service-blue text-[18px] mt-0.5">check_circle</span>
-                                <span>今の仕事に違和感があるが、何がしたいかわからない</span>
+                                <span>人生の歩み方には様々な選択肢があることを伝えたい企業・学校・自治体など</span>
                             </li>
                             <li class="flex items-start gap-2">
                                 <span
                                     class="material-symbols-outlined text-service-blue text-[18px] mt-0.5">check_circle</span>
-                                <span>転職を考えているが、軸が定まらない</span>
+                                <span>子どもたちにキャリア教育を届けたい学校・自治体など</span>
                             </li>
                             <li class="flex items-start gap-2">
                                 <span
                                     class="material-symbols-outlined text-service-blue text-[18px] mt-0.5">check_circle</span>
-                                <span>自分の強みを言語化したい</span>
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <span
-                                    class="material-symbols-outlined text-service-blue text-[18px] mt-0.5">check_circle</span>
-                                <span>中長期的なキャリアビジョンを描きたい</span>
+                                <span>従業員のキャリア自律・多様な働き方を促進したい企業など</span>
                             </li>
                         </ul>
                     </div>
 
-                    <div class="bg-slate-50 dark:bg-zinc-800 rounded-xl p-6 mb-8">
-                        <h4 class="font-bold text-slate-900 dark:text-white text-sm mb-4">プログラム内容</h4>
-                        <div class="grid grid-cols-2 gap-4 text-sm">
+                    <div class="bg-slate-50 dark:bg-zinc-800 rounded-xl p-6 mb-8 lg:mb-0">
+                        <h4 class="font-bold text-slate-900 dark:text-white text-sm mb-4">登壇内容（例）</h4>
+                        <div class="grid grid-cols-3 gap-4 text-sm">
                             <div>
-                                <p class="text-slate-500 dark:text-slate-400">期間</p>
-                                <p class="text-slate-900 dark:text-white font-medium">3ヶ月〜</p>
-                            </div>
-                            <div>
-                                <p class="text-slate-500 dark:text-slate-400">セッション</p>
-                                <p class="text-slate-900 dark:text-white font-medium">月2回（各60分）</p>
+                                <p class="text-slate-500 dark:text-slate-400">時間</p>
+                                <p class="text-slate-900 dark:text-white font-medium">30分～</p>
                             </div>
                             <div>
                                 <p class="text-slate-500 dark:text-slate-400">形式</p>
-                                <p class="text-slate-900 dark:text-white font-medium">オンライン / 対面</p>
+                                <p class="text-slate-900 dark:text-white font-medium">現地対応 / オンライン</p>
                             </div>
                             <div>
                                 <p class="text-slate-500 dark:text-slate-400">料金</p>
-                                <p class="text-slate-900 dark:text-white font-medium">¥50,000〜/月</p>
+                                <p class="text-slate-900 dark:text-white font-medium">50,000円 / 60分</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="mt-8 pt-8 border-t border-slate-100 dark:border-slate-800">
-                        <h4 class="font-bold text-slate-900 dark:text-white text-sm mb-4">事例紹介</h4>
-                        <div class="flex gap-4 items-center">
-                            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=300&q=80"
-                                alt="Case Study 1" class="w-20 h-20 rounded-lg object-cover">
-                            <div>
-                                <p class="text-[10px] text-slate-400 mb-1">2024.01.15</p>
-                                <p class="text-sm font-bold text-slate-800 dark:text-slate-200">30代ベンチャーマネージャーの次なる挑戦</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mt-8">
-                        <a href="contact.html"
+                    <!-- Button for desktop only -->
+                    <div class="mt-8 hidden lg:block">
+                        <a href="contact.html?service=lecture"
                             class="inline-flex items-center gap-2 px-6 py-3 bg-service-blue text-white font-bold rounded-full hover:shadow-lg transition-all text-sm">
                             お問い合わせはこちら
                             <span class="material-symbols-outlined text-sm">arrow_forward</span>
@@ -293,177 +293,262 @@
                     </div>
                 </div>
 
-                <div class="relative">
-                    <div class="aspect-[4/3] rounded-2xl overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
-                            alt="Career Coaching Session" class="w-full h-full object-cover" loading="lazy" />
-                    </div>
-                    <div
-                        class="absolute -bottom-6 -right-6 w-24 h-24 md:w-32 md:h-32 bg-service-blue/10 rounded-full -z-10">
+                <!-- Right: Carousel (top-aligned with description) -->
+                <div class="lg:w-1/2 mt-10 lg:mt-0">
+                    <div class="relative" id="lecture-carousel">
+                        <div class="overflow-hidden rounded-xl">
+                            <div class="lecture-carousel-track flex transition-transform duration-500 ease-in-out">
+                                <div class="lecture-carousel-slide min-w-full px-1">
+                                    <div class="relative rounded-xl overflow-hidden">
+                                        <img src="example_lecture_1.png" alt="社会人向け：時間の使い方改革"
+                                            class="w-full aspect-[4/3] object-cover">
+                                        <div
+                                            class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4 pt-10">
+                                            <p class="text-white text-sm font-medium">社会人向け：時間の使い方改革～フラリーマンからパラレルキャリアへ～
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="lecture-carousel-slide min-w-full px-1">
+                                    <div class="relative rounded-xl overflow-hidden">
+                                        <img src="example_lecture_3.png" alt="中学生向け：自分らしいキャリアパスを描く方法"
+                                            class="w-full aspect-[4/3] object-cover">
+                                        <div
+                                            class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4 pt-10">
+                                            <p class="text-white text-sm font-medium">中学生向け："自分らしいキャリアパス"を描く方法</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Navigation arrows -->
+                        <button onclick="moveCarousel('lecture', -1)"
+                            class="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-white/80 hover:bg-white rounded-full flex items-center justify-center shadow-md transition-all z-10">
+                            <span class="material-symbols-outlined text-slate-700 text-lg">chevron_left</span>
+                        </button>
+                        <button onclick="moveCarousel('lecture', 1)"
+                            class="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-white/80 hover:bg-white rounded-full flex items-center justify-center shadow-md transition-all z-10">
+                            <span class="material-symbols-outlined text-slate-700 text-lg">chevron_right</span>
+                        </button>
+                        <!-- Dots -->
+                        <div class="flex justify-center gap-2 mt-4" id="lecture-dots"></div>
                     </div>
                 </div>
+            </div>
+
+            <!-- Button for mobile/tablet only - appears after carousel -->
+            <div class="mt-8 lg:hidden">
+                <a href="contact.html?service=lecture"
+                    class="inline-flex items-center gap-2 px-6 py-3 bg-service-blue text-white font-bold rounded-full hover:shadow-lg transition-all text-sm">
+                    お問い合わせはこちら
+                    <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Service 2: Mindset Design -->
-    <section id="mindset-design" class="py-16 md:py-24 bg-background-light dark:bg-background-dark">
-        <div class="max-w-7xl mx-auto px-5 md:px-6 lg:px-8">
-            <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
-                <div class="order-2 md:order-1 relative">
-                    <div class="aspect-[4/3] rounded-2xl overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
-                            alt="Mindset Design Workshop" class="w-full h-full object-cover" loading="lazy" />
-                    </div>
-                    <div
-                        class="absolute -bottom-6 -left-6 w-24 h-24 md:w-32 md:h-32 bg-service-green/10 rounded-full -z-10">
-                    </div>
-                </div>
+    <!-- Service 2: 企業研修・ワークショップ -->
+    <section id="workshop" class="py-16 md:py-24 bg-background-light dark:bg-background-dark">
+        <div class="max-w-6xl mx-auto px-5 md:px-6 lg:px-8">
+            <!-- Header (full width) -->
+            <div
+                class="w-16 h-16 md:w-20 md:h-20 bg-service-green/10 rounded-full flex items-center justify-center mb-6">
+                <span class="material-symbols-outlined text-service-green text-3xl md:text-4xl">groups</span>
+            </div>
+            <h2 class="text-xs md:text-sm font-display font-bold tracking-widest text-service-green mb-3">
+                SERVICE 2</h2>
+            <h3 class="text-2xl md:text-3xl lg:text-4xl font-serif leading-tight mb-2 text-slate-900 dark:text-white">
+                企業研修・ワークショップ
+            </h3>
+            <p class="text-slate-900 dark:text-white font-bold mb-6 text-sm md:text-base">
+                ゼロベースで企画設計する研修講師/ファシリテーター
+            </p>
 
-                <div class="order-1 md:order-2">
-                    <div
-                        class="w-16 h-16 md:w-20 md:h-20 bg-service-green/10 rounded-full flex items-center justify-center mb-6">
-                        <span
-                            class="material-symbols-outlined text-service-green text-3xl md:text-4xl">psychology</span>
-                    </div>
-                    <h2 class="text-xs md:text-sm font-display font-bold tracking-widest text-service-green mb-3">
-                        SERVICE 02</h2>
-                    <h3
-                        class="text-2xl md:text-3xl lg:text-4xl font-serif leading-tight mb-6 text-slate-900 dark:text-white">
-                        Mindset Design
-                    </h3>
-                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-6 text-sm md:text-base">
-                        行動を妨げるマインドブロックを解き、しなやかで強固な「自分軸」を構築するワークショップです。頭ではわかっているのに行動できない、そんな自分を変えたい方へ。
+            <!-- Two-column: text + carousel -->
+            <div class="flex flex-col lg:flex-row lg:gap-12 lg:items-start">
+                <!-- Left: Text content -->
+                <div class="lg:w-1/2">
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-8 text-sm md:text-base">
+                        パッケージ型の研修ではなく、参加者一人ひとりのニーズや課題に合わせてゼロベースで企画設計します。<br />
+                        「無意識を意識に変える」ことで、意識変容から行動変容へとつながる研修・ワークショップをお届けします。
                     </p>
 
                     <div class="space-y-4 mb-8">
-                        <h4 class="font-bold text-slate-900 dark:text-white text-sm">こんな方におすすめ</h4>
+                        <h4 class="font-bold text-slate-900 dark:text-white text-sm">こんな方におすすめ：</h4>
                         <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-400">
                             <li class="flex items-start gap-2">
                                 <span
                                     class="material-symbols-outlined text-service-green text-[18px] mt-0.5">check_circle</span>
-                                <span>周りの目が気になって自分らしくいられない</span>
+                                <span>従業員のキャリア自律を促進したい企業など</span>
                             </li>
                             <li class="flex items-start gap-2">
                                 <span
                                     class="material-symbols-outlined text-service-green text-[18px] mt-0.5">check_circle</span>
-                                <span>自己肯定感を高めたい</span>
+                                <span>キャリアアドバイザーや人事担当者を育成したい企業など</span>
                             </li>
                             <li class="flex items-start gap-2">
                                 <span
                                     class="material-symbols-outlined text-service-green text-[18px] mt-0.5">check_circle</span>
-                                <span>ストレスや不安をコントロールしたい</span>
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <span
-                                    class="material-symbols-outlined text-service-green text-[18px] mt-0.5">check_circle</span>
-                                <span>新しい習慣を身につけたい</span>
+                                <span>育休・時短勤務の理解を深めたい管理職など</span>
                             </li>
                         </ul>
                     </div>
 
-                    <div class="bg-white dark:bg-zinc-800 rounded-xl p-6 mb-8">
-                        <h4 class="font-bold text-slate-900 dark:text-white text-sm mb-4">プログラム内容</h4>
-                        <div class="grid grid-cols-2 gap-4 text-sm">
+                    <div class="bg-white dark:bg-zinc-800 rounded-xl p-6 mb-8 lg:mb-0">
+                        <h4 class="font-bold text-slate-900 dark:text-white text-sm mb-4">プログラム内容（例）</h4>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
                             <div>
-                                <p class="text-slate-500 dark:text-slate-400">期間</p>
-                                <p class="text-slate-900 dark:text-white font-medium">2ヶ月〜</p>
+                                <p class="text-slate-500 dark:text-slate-400">時間</p>
+                                <p class="text-slate-900 dark:text-white font-medium">半日（3時間）～</p>
                             </div>
                             <div>
-                                <p class="text-slate-500 dark:text-slate-400">セッション</p>
-                                <p class="text-slate-900 dark:text-white font-medium">週1回（各90分）</p>
+                                <p class="text-slate-500 dark:text-slate-400">回数</p>
+                                <p class="text-slate-900 dark:text-white font-medium">1回～</p>
                             </div>
                             <div>
                                 <p class="text-slate-500 dark:text-slate-400">形式</p>
-                                <p class="text-slate-900 dark:text-white font-medium">グループ / 個人</p>
+                                <p class="text-slate-900 dark:text-white font-medium">現地対応 / オンライン</p>
                             </div>
                             <div>
                                 <p class="text-slate-500 dark:text-slate-400">料金</p>
-                                <p class="text-slate-900 dark:text-white font-medium">¥30,000〜/月</p>
+                                <p class="text-slate-900 dark:text-white font-medium">250,000円～ / 3時間</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="mt-8 pt-8 border-t border-slate-100 dark:border-slate-800">
-                        <h4 class="font-bold text-slate-900 dark:text-white text-sm mb-4">事例紹介</h4>
-                        <div class="flex gap-4 items-center">
-                            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=300&q=80"
-                                alt="Case Study 2" class="w-20 h-20 rounded-lg object-cover">
-                            <div>
-                                <p class="text-[10px] text-slate-400 mb-1">2023.11.20</p>
-                                <p class="text-sm font-bold text-slate-800 dark:text-slate-200">フリーランスとしての「自分軸」を確立</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mt-8">
-                        <a href="contact.html"
+                    <!-- Button for desktop only -->
+                    <div class="mt-8 hidden lg:block">
+                        <a href="contact.html?service=workshop"
                             class="inline-flex items-center gap-2 px-6 py-3 bg-service-green text-white font-bold rounded-full hover:shadow-lg transition-all text-sm">
                             お問い合わせはこちら
                             <span class="material-symbols-outlined text-sm">arrow_forward</span>
                         </a>
                     </div>
                 </div>
+
+                <!-- Right: Carousel -->
+                <div class="lg:w-1/2 mt-10 lg:mt-0">
+                    <div class="relative" id="workshop-carousel">
+                        <div class="overflow-hidden rounded-xl">
+                            <div class="workshop-carousel-track flex transition-transform duration-500 ease-in-out">
+                                <div class="workshop-carousel-slide min-w-full px-1">
+                                    <div class="relative rounded-xl overflow-hidden">
+                                        <div
+                                            class="w-full aspect-[4/3] bg-slate-200 dark:bg-zinc-700 flex items-center justify-center">
+                                            <span
+                                                class="material-symbols-outlined text-slate-400 dark:text-zinc-500 text-5xl">image</span>
+                                        </div>
+                                        <div
+                                            class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4 pt-10">
+                                            <p class="text-white text-sm font-medium">社会人向け：人材育成のポイント～コミュニケーションと目標設定～
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="workshop-carousel-slide min-w-full px-1">
+                                    <div class="relative rounded-xl overflow-hidden">
+                                        <div
+                                            class="w-full aspect-[4/3] bg-slate-200 dark:bg-zinc-700 flex items-center justify-center">
+                                            <span
+                                                class="material-symbols-outlined text-slate-400 dark:text-zinc-500 text-5xl">image</span>
+                                        </div>
+                                        <div
+                                            class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4 pt-10">
+                                            <p class="text-white text-sm font-medium">
+                                                社会人向け：成果につながる育成術～部下の行動を変える育成＆コミュニケーション～</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Navigation arrows -->
+                        <button onclick="moveCarousel('workshop', -1)"
+                            class="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-white/80 hover:bg-white rounded-full flex items-center justify-center shadow-md transition-all z-10">
+                            <span class="material-symbols-outlined text-slate-700 text-lg">chevron_left</span>
+                        </button>
+                        <button onclick="moveCarousel('workshop', 1)"
+                            class="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-white/80 hover:bg-white rounded-full flex items-center justify-center shadow-md transition-all z-10">
+                            <span class="material-symbols-outlined text-slate-700 text-lg">chevron_right</span>
+                        </button>
+                        <!-- Dots -->
+                        <div class="flex justify-center gap-2 mt-4" id="workshop-dots"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Button for mobile/tablet only - appears after carousel -->
+            <div class="mt-8 lg:hidden">
+                <a href="contact.html?service=workshop"
+                    class="inline-flex items-center gap-2 px-6 py-3 bg-service-green text-white font-bold rounded-full hover:shadow-lg transition-all text-sm">
+                    お問い合わせはこちら
+                    <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Service 3: Personal Branding -->
-    <section id="personal-branding" class="py-16 md:py-24 bg-white dark:bg-zinc-900">
-        <div class="max-w-7xl mx-auto px-5 md:px-6 lg:px-8">
-            <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
-                <div>
-                    <div
-                        class="w-16 h-16 md:w-20 md:h-20 bg-service-brown/10 rounded-full flex items-center justify-center mb-6">
-                        <span
-                            class="material-symbols-outlined text-service-brown text-3xl md:text-4xl">auto_awesome</span>
+    <!-- Service 3: キャリア支援 -->
+    <section id="career-support" class="py-16 md:py-24 bg-white dark:bg-zinc-900">
+        <div class="max-w-6xl mx-auto px-5 md:px-6 lg:px-8">
+            <!-- Header (full width) -->
+            <div
+                class="w-16 h-16 md:w-20 md:h-20 bg-service-brown/10 rounded-full flex items-center justify-center mb-6">
+                <span class="material-symbols-outlined text-service-brown text-3xl md:text-4xl">handshake</span>
+            </div>
+            <h2 class="text-xs md:text-sm font-display font-bold tracking-widest text-service-brown mb-3">
+                SERVICE 3</h2>
+            <h3 class="text-2xl md:text-3xl lg:text-4xl font-serif leading-tight mb-2 text-slate-900 dark:text-white">
+                キャリア支援
+            </h3>
+            <p class="text-slate-900 dark:text-white font-bold mb-6 text-sm md:text-base">
+                本質的なキャリア支援者
+            </p>
+
+            <!-- Two-column: text + carousel -->
+            <div class="flex flex-col lg:flex-row lg:gap-12 lg:items-start">
+                <!-- Left: Text content -->
+                <div class="lg:w-1/2">
+                    <div class="text-slate-600 dark:text-slate-400 leading-relaxed mb-8 text-sm md:text-base space-y-4">
+                        <p>
+                            2,000名以上の転職相談、250名以上の人材育成を経験しています。<br />
+                            これらの経験とキャリアコンサルタントとしての知識を活かしながら、目の前にいる「あなた」に向き合うことを大切にしています。
+                        </p>
+                        <p>
+                            本質的な問いかけにより、本人が言語化できていない想いや価値観を言語化し、思い描くキャリアを共に考えます。
+                        </p>
                     </div>
-                    <h2 class="text-xs md:text-sm font-display font-bold tracking-widest text-service-brown mb-3">
-                        SERVICE 03</h2>
-                    <h3
-                        class="text-2xl md:text-3xl lg:text-4xl font-serif leading-tight mb-6 text-slate-900 dark:text-white">
-                        Personal Branding
-                    </h3>
-                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-6 text-sm md:text-base">
-                        フリーランスや複業を考える方へ。あなただけの「選ばれる理由」を抽出し、社会へ届けるサポートをします。自分の価値を正しく伝え、理想のクライアントと繋がりましょう。
-                    </p>
 
                     <div class="space-y-4 mb-8">
-                        <h4 class="font-bold text-slate-900 dark:text-white text-sm">こんな方におすすめ</h4>
+                        <h4 class="font-bold text-slate-900 dark:text-white text-sm">こんな方におすすめ：</h4>
                         <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-400">
                             <li class="flex items-start gap-2">
                                 <span
                                     class="material-symbols-outlined text-service-brown text-[18px] mt-0.5">check_circle</span>
-                                <span>独立・起業を考えている</span>
+                                <span>自分の強みや価値観が分からず、キャリアに迷っている方など</span>
                             </li>
                             <li class="flex items-start gap-2">
                                 <span
                                     class="material-symbols-outlined text-service-brown text-[18px] mt-0.5">check_circle</span>
-                                <span>副業・複業を始めたい</span>
+                                <span>育休・時短勤務中で、復職後のキャリアに不安を感じている方など</span>
                             </li>
                             <li class="flex items-start gap-2">
                                 <span
                                     class="material-symbols-outlined text-service-brown text-[18px] mt-0.5">check_circle</span>
-                                <span>自分の専門性を発信したい</span>
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <span
-                                    class="material-symbols-outlined text-service-brown text-[18px] mt-0.5">check_circle</span>
-                                <span>SNSやWebでの発信を強化したい</span>
+                                <span>キャリアチェンジを考えているが、一歩を踏み出せない方など</span>
                             </li>
                         </ul>
                     </div>
 
-                    <div class="bg-slate-50 dark:bg-zinc-800 rounded-xl p-6 mb-8">
-                        <h4 class="font-bold text-slate-900 dark:text-white text-sm mb-4">プログラム内容</h4>
-                        <div class="grid grid-cols-2 gap-4 text-sm">
+                    <div class="bg-slate-50 dark:bg-zinc-800 rounded-xl p-6 mb-8 lg:mb-0">
+                        <h4 class="font-bold text-slate-900 dark:text-white text-sm mb-4">サービス内容（例）</h4>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
                             <div>
-                                <p class="text-slate-500 dark:text-slate-400">期間</p>
-                                <p class="text-slate-900 dark:text-white font-medium">3ヶ月〜</p>
+                                <p class="text-slate-500 dark:text-slate-400">時間</p>
+                                <p class="text-slate-900 dark:text-white font-medium">60分～</p>
                             </div>
                             <div>
-                                <p class="text-slate-500 dark:text-slate-400">セッション</p>
-                                <p class="text-slate-900 dark:text-white font-medium">月2回（各60分）</p>
+                                <p class="text-slate-500 dark:text-slate-400">回数</p>
+                                <p class="text-slate-900 dark:text-white font-medium">1回～</p>
                             </div>
                             <div>
                                 <p class="text-slate-500 dark:text-slate-400">形式</p>
@@ -471,25 +556,14 @@
                             </div>
                             <div>
                                 <p class="text-slate-500 dark:text-slate-400">料金</p>
-                                <p class="text-slate-900 dark:text-white font-medium">¥60,000〜/月</p>
+                                <p class="text-slate-900 dark:text-white font-medium">6,000円～ / 回</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="mt-8 pt-8 border-t border-slate-100 dark:border-slate-800">
-                        <h4 class="font-bold text-slate-900 dark:text-white text-sm mb-4">事例紹介</h4>
-                        <div class="flex gap-4 items-center">
-                            <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=300&q=80"
-                                alt="Case Study 3" class="w-20 h-20 rounded-lg object-cover">
-                            <div>
-                                <p class="text-[10px] text-slate-400 mb-1">2023.09.10</p>
-                                <p class="text-sm font-bold text-slate-800 dark:text-slate-200">複業から本業へ。個人のブランド力を強化</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mt-8">
-                        <a href="contact.html"
+                    <!-- Button for desktop only -->
+                    <div class="mt-8 hidden lg:block">
+                        <a href="contact.html?service=career"
                             class="inline-flex items-center gap-2 px-6 py-3 bg-service-brown text-white font-bold rounded-full hover:shadow-lg transition-all text-sm">
                             お問い合わせはこちら
                             <span class="material-symbols-outlined text-sm">arrow_forward</span>
@@ -497,15 +571,38 @@
                     </div>
                 </div>
 
-                <div class="relative">
-                    <div class="aspect-[4/3] rounded-2xl overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1552581234-26160f608093?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
-                            alt="Personal Branding" class="w-full h-full object-cover" loading="lazy" />
-                    </div>
-                    <div
-                        class="absolute -bottom-6 -right-6 w-24 h-24 md:w-32 md:h-32 bg-service-brown/10 rounded-full -z-10">
+                <!-- Right: Carousel -->
+                <div class="lg:w-1/2 mt-10 lg:mt-0">
+                    <div class="relative" id="career-carousel">
+                        <div class="overflow-hidden rounded-xl">
+                            <div class="career-carousel-track flex transition-transform duration-500 ease-in-out">
+                                <div class="career-carousel-slide min-w-full px-1">
+                                    <div class="relative rounded-xl overflow-hidden">
+                                        <div
+                                            class="w-full aspect-[4/3] bg-slate-200 dark:bg-zinc-700 flex items-center justify-center">
+                                            <span
+                                                class="material-symbols-outlined text-slate-400 dark:text-zinc-500 text-5xl">image</span>
+                                        </div>
+                                        <div
+                                            class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4 pt-10">
+                                            <p class="text-white text-sm font-medium">
+                                                マーケティング職での転職を希望。1年間の伴走支援で現職でスキルアップ、その後に転職を実現！</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+            </div>
+
+            <!-- Button for mobile/tablet only - appears after carousel -->
+            <div class="mt-8 lg:hidden">
+                <a href="contact.html?service=career"
+                    class="inline-flex items-center gap-2 px-6 py-3 bg-service-brown text-white font-bold rounded-full hover:shadow-lg transition-all text-sm">
+                    お問い合わせはこちら
+                    <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                </a>
             </div>
         </div>
     </section>
@@ -521,61 +618,327 @@
                 </h3>
             </div>
 
-            <div class="space-y-4">
-                <!-- FAQ 1 -->
+            <!-- FAQ Tabs -->
+            <div class="flex flex-wrap justify-center gap-2 mb-8">
+                <button class="faq-tab active px-4 py-2 rounded-full text-sm font-medium transition-all"
+                    data-tab="general">全般</button>
+                <button class="faq-tab px-4 py-2 rounded-full text-sm font-medium transition-all"
+                    data-tab="lecture">講演・セミナー</button>
+                <button class="faq-tab px-4 py-2 rounded-full text-sm font-medium transition-all"
+                    data-tab="workshop">研修・ワークショップ</button>
+                <button class="faq-tab px-4 py-2 rounded-full text-sm font-medium transition-all"
+                    data-tab="career">キャリア相談</button>
+                <button class="faq-tab px-4 py-2 rounded-full text-sm font-medium transition-all"
+                    data-tab="other">その他</button>
+            </div>
+
+            <!-- 全般 -->
+            <div class="faq-panel space-y-4" data-panel="general">
                 <details class="group bg-background-light dark:bg-zinc-800 rounded-xl">
                     <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none">
                         <span
-                            class="font-medium text-slate-900 dark:text-white text-sm md:text-base pr-4">初回のお問い合わせではどのような相談ができますか？</span>
+                            class="font-medium text-slate-900 dark:text-white text-sm md:text-base pr-4">まだ具体的なことは決まっていないのですが、相談できますか？</span>
                         <span
-                            class="material-symbols-outlined text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+                            class="material-symbols-outlined text-slate-400 group-open:rotate-180 transition-transform shrink-0">expand_more</span>
                     </summary>
                     <div class="px-5 md:px-6 pb-5 md:pb-6 text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
-                        お問い合わせフォームよりいただいた内容に基づき、サービスの詳細説明や、現状のお悩みに対する解決の方向性について丁寧にお答えいたします。まずはお気軽にご状況をお聞かせください。
+                        はい、もちろんです。「何ができるか知りたい」「まずは話を聞いてみたい」という段階でも大丈夫です。お話を伺いながら、一緒に考えさせていただきます。初回のご相談は無料ですので、お気軽にお問い合わせください。
                     </div>
                 </details>
-
-                <!-- FAQ 2 -->
                 <details class="group bg-background-light dark:bg-zinc-800 rounded-xl">
                     <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none">
                         <span
-                            class="font-medium text-slate-900 dark:text-white text-sm md:text-base pr-4">オンラインでのセッションは可能ですか？</span>
+                            class="font-medium text-slate-900 dark:text-white text-sm md:text-base pr-4">オンラインでの実施は可能ですか？</span>
                         <span
-                            class="material-symbols-outlined text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+                            class="material-symbols-outlined text-slate-400 group-open:rotate-180 transition-transform shrink-0">expand_more</span>
                     </summary>
                     <div class="px-5 md:px-6 pb-5 md:pb-6 text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
-                        はい、すべてのサービスでオンラインセッション（Zoom）に対応しています。全国どこからでもご利用いただけます。
+                        はい、可能です。講演・セミナー、研修・ワークショップ、キャリア支援のすべてで、オンライン（Zoom等）での実施に対応しています。対面・オンライン・ハイブリッド形式など、ご希望に合わせて柔軟に対応いたします。
                     </div>
                 </details>
-
-                <!-- FAQ 3 -->
                 <details class="group bg-background-light dark:bg-zinc-800 rounded-xl">
                     <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none">
                         <span
-                            class="font-medium text-slate-900 dark:text-white text-sm md:text-base pr-4">途中解約はできますか？</span>
+                            class="font-medium text-slate-900 dark:text-white text-sm md:text-base pr-4">料金はどのくらいですか？</span>
                         <span
-                            class="material-symbols-outlined text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+                            class="material-symbols-outlined text-slate-400 group-open:rotate-180 transition-transform shrink-0">expand_more</span>
                     </summary>
                     <div class="px-5 md:px-6 pb-5 md:pb-6 text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
-                        はい、1ヶ月前にお申し出いただければ、途中解約が可能です。詳細は契約時にご説明いたします。
+                        内容・時間・規模によって異なります。まずはお気軽にご相談ください。ご予算に合わせて、最適なプランを提案いたします。
                     </div>
                 </details>
-
-                <!-- FAQ 4 -->
                 <details class="group bg-background-light dark:bg-zinc-800 rounded-xl">
                     <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none">
                         <span
-                            class="font-medium text-slate-900 dark:text-white text-sm md:text-base pr-4">どのサービスを選べばいいかわかりません</span>
+                            class="font-medium text-slate-900 dark:text-white text-sm md:text-base pr-4">地方からの依頼も可能ですか？</span>
                         <span
-                            class="material-symbols-outlined text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+                            class="material-symbols-outlined text-slate-400 group-open:rotate-180 transition-transform shrink-0">expand_more</span>
                     </summary>
                     <div class="px-5 md:px-6 pb-5 md:pb-6 text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
-                        まずはお問い合わせフォームよりお気軽にご連絡ください。ご状況やご希望をお伺いした上で、最適なサービスをご提案いたします。複数のサービスを組み合わせることも可能です。
+                        はい、全国どこでも対応可能です。オンラインでの実施はもちろん、必要に応じて現地への訪問も可能です（宿泊・交通費別途）。お気軽にご相談ください。
+                    </div>
+                </details>
+                <details class="group bg-background-light dark:bg-zinc-800 rounded-xl">
+                    <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none">
+                        <span
+                            class="font-medium text-slate-900 dark:text-white text-sm md:text-base pr-4">急な依頼にも対応できますか？</span>
+                        <span
+                            class="material-symbols-outlined text-slate-400 group-open:rotate-180 transition-transform shrink-0">expand_more</span>
+                    </summary>
+                    <div class="px-5 md:px-6 pb-5 md:pb-6 text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                        スケジュールが空いていれば対応可能です。まずは一度ご相談ください。日程調整や内容のすり合わせなど、柔軟に対応いたします。
+                    </div>
+                </details>
+            </div>
+
+            <!-- 講演・セミナー -->
+            <div class="faq-panel space-y-4 hidden" data-panel="lecture">
+                <details class="group bg-background-light dark:bg-zinc-800 rounded-xl">
+                    <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none">
+                        <span
+                            class="font-medium text-slate-900 dark:text-white text-sm md:text-base pr-4">講演時間はどのくらいですか？</span>
+                        <span
+                            class="material-symbols-outlined text-slate-400 group-open:rotate-180 transition-transform shrink-0">expand_more</span>
+                    </summary>
+                    <div class="px-5 md:px-6 pb-5 md:pb-6 text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                        60分〜90分が一般的ですが、30分の短時間講演から、半日のワークショップ形式まで柔軟に対応可能です。ご希望に合わせて調整いたします。
+                    </div>
+                </details>
+                <details class="group bg-background-light dark:bg-zinc-800 rounded-xl">
+                    <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none">
+                        <span
+                            class="font-medium text-slate-900 dark:text-white text-sm md:text-base pr-4">どんなテーマで講演できますか？</span>
+                        <span
+                            class="material-symbols-outlined text-slate-400 group-open:rotate-180 transition-transform shrink-0">expand_more</span>
+                    </summary>
+                    <div class="px-5 md:px-6 pb-5 md:pb-6 text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                        キャリアデザイン、自分らしい働き方、育休・時短勤務、パラレルキャリア、親子で考えるキャリアなど、幅広いテーマに対応しています。お客様の要望や課題に合わせてカスタマイズも可能です。
+                    </div>
+                </details>
+                <details class="group bg-background-light dark:bg-zinc-800 rounded-xl">
+                    <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none">
+                        <span
+                            class="font-medium text-slate-900 dark:text-white text-sm md:text-base pr-4">参加者の対象は誰ですか？</span>
+                        <span
+                            class="material-symbols-outlined text-slate-400 group-open:rotate-180 transition-transform shrink-0">expand_more</span>
+                    </summary>
+                    <div class="px-5 md:px-6 pb-5 md:pb-6 text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                        子ども（小中学生）から社会人、管理職、経営者まで幅広く対応しています。学校、企業、NPOなど、さまざまな場で講演実績があります。
+                    </div>
+                </details>
+                <details class="group bg-background-light dark:bg-zinc-800 rounded-xl">
+                    <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none">
+                        <span
+                            class="font-medium text-slate-900 dark:text-white text-sm md:text-base pr-4">講演内容は事前に相談できますか？</span>
+                        <span
+                            class="material-symbols-outlined text-slate-400 group-open:rotate-180 transition-transform shrink-0">expand_more</span>
+                    </summary>
+                    <div class="px-5 md:px-6 pb-5 md:pb-6 text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                        はい、もちろんです。事前にヒアリングを行い、参加者の属性や抱えている課題に合わせて内容をカスタマイズいたします。一緒に最適な内容を考えていきましょう。
+                    </div>
+                </details>
+                <details class="group bg-background-light dark:bg-zinc-800 rounded-xl">
+                    <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none">
+                        <span
+                            class="font-medium text-slate-900 dark:text-white text-sm md:text-base pr-4">講演資料は提供してもらえますか？</span>
+                        <span
+                            class="material-symbols-outlined text-slate-400 group-open:rotate-180 transition-transform shrink-0">expand_more</span>
+                    </summary>
+                    <div class="px-5 md:px-6 pb-5 md:pb-6 text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                        はい、講演で使用したスライド資料は、ご希望に応じて提供いたします（一部資料を除く）。また、参加者向けの配布資料が必要な場合もご相談ください。
+                    </div>
+                </details>
+            </div>
+
+            <!-- 研修・ワークショップ -->
+            <div class="faq-panel space-y-4 hidden" data-panel="workshop">
+                <details class="group bg-background-light dark:bg-zinc-800 rounded-xl">
+                    <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none">
+                        <span
+                            class="font-medium text-slate-900 dark:text-white text-sm md:text-base pr-4">パッケージ型の研修ですか？</span>
+                        <span
+                            class="material-symbols-outlined text-slate-400 group-open:rotate-180 transition-transform shrink-0">expand_more</span>
+                    </summary>
+                    <div class="px-5 md:px-6 pb-5 md:pb-6 text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                        いいえ、パッケージ型ではありません。お客様の要望や課題、参加者一人ひとりに合わせて、ゼロベースで企画設計します。無意識を意識に変えることで、意識変容から行動変容へとつながる研修をお届けします。
+                    </div>
+                </details>
+                <details class="group bg-background-light dark:bg-zinc-800 rounded-xl">
+                    <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none">
+                        <span
+                            class="font-medium text-slate-900 dark:text-white text-sm md:text-base pr-4">研修の期間はどのくらいですか？</span>
+                        <span
+                            class="material-symbols-outlined text-slate-400 group-open:rotate-180 transition-transform shrink-0">expand_more</span>
+                    </summary>
+                    <div class="px-5 md:px-6 pb-5 md:pb-6 text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                        半日（3時間）から複数回にわたる継続研修まで、柔軟に対応可能です。ご希望や目的に合わせて最適なプランを提案いたします。
+                    </div>
+                </details>
+                <details class="group bg-background-light dark:bg-zinc-800 rounded-xl">
+                    <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none">
+                        <span
+                            class="font-medium text-slate-900 dark:text-white text-sm md:text-base pr-4">どんな研修ができますか？</span>
+                        <span
+                            class="material-symbols-outlined text-slate-400 group-open:rotate-180 transition-transform shrink-0">expand_more</span>
+                    </summary>
+                    <div class="px-5 md:px-6 pb-5 md:pb-6 text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                        キャリアアドバイザー育成研修、キャリア自律研修、管理職向け育休・時短勤務理解研修、1on1研修など、幅広く対応しています。お客様の要望や課題に合わせてカスタマイズ可能です。
+                    </div>
+                </details>
+                <details class="group bg-background-light dark:bg-zinc-800 rounded-xl">
+                    <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none">
+                        <span
+                            class="font-medium text-slate-900 dark:text-white text-sm md:text-base pr-4">何名から実施できますか？</span>
+                        <span
+                            class="material-symbols-outlined text-slate-400 group-open:rotate-180 transition-transform shrink-0">expand_more</span>
+                    </summary>
+                    <div class="px-5 md:px-6 pb-5 md:pb-6 text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                        少人数（5名程度）から大人数（100名以上）まで対応可能です。人数や目的に合わせて、最適な形式（講義型・ワークショップ型・1on1型など）を提案いたします。
+                    </div>
+                </details>
+                <details class="group bg-background-light dark:bg-zinc-800 rounded-xl">
+                    <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none">
+                        <span
+                            class="font-medium text-slate-900 dark:text-white text-sm md:text-base pr-4">研修後のフォローアップはありますか？</span>
+                        <span
+                            class="material-symbols-outlined text-slate-400 group-open:rotate-180 transition-transform shrink-0">expand_more</span>
+                    </summary>
+                    <div class="px-5 md:px-6 pb-5 md:pb-6 text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                        はい、可能です。研修後のアンケート実施、振り返りセッション、継続的なフォローアップ研修など、ご希望に応じて対応いたします。行動変容が定着するまで、伴走いたします。
+                    </div>
+                </details>
+                <details class="group bg-background-light dark:bg-zinc-800 rounded-xl">
+                    <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none">
+                        <span
+                            class="font-medium text-slate-900 dark:text-white text-sm md:text-base pr-4">研修の効果測定はできますか？</span>
+                        <span
+                            class="material-symbols-outlined text-slate-400 group-open:rotate-180 transition-transform shrink-0">expand_more</span>
+                    </summary>
+                    <div class="px-5 md:px-6 pb-5 md:pb-6 text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                        はい、事前・事後のアンケートや、参加者の行動変容の追跡など、効果測定のサポートも可能です。ご要望に応じて設計いたします。
+                    </div>
+                </details>
+            </div>
+
+            <!-- キャリア相談 -->
+            <div class="faq-panel space-y-4 hidden" data-panel="career">
+                <details class="group bg-background-light dark:bg-zinc-800 rounded-xl">
+                    <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none">
+                        <span
+                            class="font-medium text-slate-900 dark:text-white text-sm md:text-base pr-4">どんなキャリア相談ができますか？</span>
+                        <span
+                            class="material-symbols-outlined text-slate-400 group-open:rotate-180 transition-transform shrink-0">expand_more</span>
+                    </summary>
+                    <div class="px-5 md:px-6 pb-5 md:pb-6 text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                        転職、復職、キャリアチェンジ、育休・時短勤務中のキャリア、50代以降のキャリア、ライフキャリア全般など、幅広いご相談に対応しています。年齢や状況を問わず、お気軽にご相談ください。
+                    </div>
+                </details>
+                <details class="group bg-background-light dark:bg-zinc-800 rounded-xl">
+                    <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none">
+                        <span
+                            class="font-medium text-slate-900 dark:text-white text-sm md:text-base pr-4">転職を前提とした相談ですか？</span>
+                        <span
+                            class="material-symbols-outlined text-slate-400 group-open:rotate-180 transition-transform shrink-0">expand_more</span>
+                    </summary>
+                    <div class="px-5 md:px-6 pb-5 md:pb-6 text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                        いいえ、転職を前提とはしていません。「転職しない選択」も含めて、一人ひとりの「いきかた」を一緒に考えます。ありのままのお話を伺いながら、最適な選択肢を見つけるお手伝いをします。
+                    </div>
+                </details>
+                <details class="group bg-background-light dark:bg-zinc-800 rounded-xl">
+                    <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none">
+                        <span
+                            class="font-medium text-slate-900 dark:text-white text-sm md:text-base pr-4">どのくらいの期間で相談できますか？</span>
+                        <span
+                            class="material-symbols-outlined text-slate-400 group-open:rotate-180 transition-transform shrink-0">expand_more</span>
+                    </summary>
+                    <div class="px-5 md:px-6 pb-5 md:pb-6 text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                        単発（60分）から、継続的なキャリアコーチング（2〜3ヶ月、月2回程度）まで対応可能です。ご希望や状況に合わせて提案いたします。
+                    </div>
+                </details>
+                <details class="group bg-background-light dark:bg-zinc-800 rounded-xl">
+                    <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none">
+                        <span
+                            class="font-medium text-slate-900 dark:text-white text-sm md:text-base pr-4">キャリア相談はどこで受けられますか？</span>
+                        <span
+                            class="material-symbols-outlined text-slate-400 group-open:rotate-180 transition-transform shrink-0">expand_more</span>
+                    </summary>
+                    <div class="px-5 md:px-6 pb-5 md:pb-6 text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                        オンライン（Zoom等）または対面（東京都内）で実施しています。ご都合に合わせて柔軟に対応いたします。
+                    </div>
+                </details>
+                <details class="group bg-background-light dark:bg-zinc-800 rounded-xl">
+                    <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none">
+                        <span
+                            class="font-medium text-slate-900 dark:text-white text-sm md:text-base pr-4">どんな人が相談していますか？</span>
+                        <span
+                            class="material-symbols-outlined text-slate-400 group-open:rotate-180 transition-transform shrink-0">expand_more</span>
+                    </summary>
+                    <div class="px-5 md:px-6 pb-5 md:pb-6 text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                        10代から70代まで、幅広い年齢層の方がご相談されています。学生、社会人、育休中・復職希望の方、転職検討中の方、キャリアチェンジを考えている方、50代以降のセカンドキャリアを考えている方など、さまざまです。
+                    </div>
+                </details>
+                <details class="group bg-background-light dark:bg-zinc-800 rounded-xl">
+                    <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none">
+                        <span
+                            class="font-medium text-slate-900 dark:text-white text-sm md:text-base pr-4">守秘義務は守られますか？</span>
+                        <span
+                            class="material-symbols-outlined text-slate-400 group-open:rotate-180 transition-transform shrink-0">expand_more</span>
+                    </summary>
+                    <div class="px-5 md:px-6 pb-5 md:pb-6 text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                        はい、もちろんです。ご相談内容は厳重に管理し、第三者に開示することは一切ありません。安心してお話しください。
+                    </div>
+                </details>
+                <details class="group bg-background-light dark:bg-zinc-800 rounded-xl">
+                    <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none">
+                        <span
+                            class="font-medium text-slate-900 dark:text-white text-sm md:text-base pr-4">国家資格キャリアコンサルタントとは何ですか？</span>
+                        <span
+                            class="material-symbols-outlined text-slate-400 group-open:rotate-180 transition-transform shrink-0">expand_more</span>
+                    </summary>
+                    <div class="px-5 md:px-6 pb-5 md:pb-6 text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                        厚生労働省が認定する国家資格で、キャリアに関する専門的な知識と技能を持つ専門家です。守秘義務が課せられており、安心してご相談いただけます。
+                    </div>
+                </details>
+            </div>
+
+            <!-- その他 -->
+            <div class="faq-panel space-y-4 hidden" data-panel="other">
+                <details class="group bg-background-light dark:bg-zinc-800 rounded-xl">
+                    <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none">
+                        <span
+                            class="font-medium text-slate-900 dark:text-white text-sm md:text-base pr-4">企業での講演・研修実績はありますか？</span>
+                        <span
+                            class="material-symbols-outlined text-slate-400 group-open:rotate-180 transition-transform shrink-0">expand_more</span>
+                    </summary>
+                    <div class="px-5 md:px-6 pb-5 md:pb-6 text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                        はい、パーソルキャリア株式会社への在籍時に社内研修や講演を多数実施してきました。また、株式会社AZentのCOOとして、ウェルビーイング経営研修やAIパーパス可視化プロジェクトにも携わった経験もあります。
+                    </div>
+                </details>
+                <details class="group bg-background-light dark:bg-zinc-800 rounded-xl">
+                    <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none">
+                        <span
+                            class="font-medium text-slate-900 dark:text-white text-sm md:text-base pr-4">学校での講演実績はありますか？</span>
+                        <span
+                            class="material-symbols-outlined text-slate-400 group-open:rotate-180 transition-transform shrink-0">expand_more</span>
+                    </summary>
+                    <div class="px-5 md:px-6 pb-5 md:pb-6 text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                        はい、中学校・高校でのキャリア教育講演や大学での講義など、子どもから学生まで幅広い世代への講演実績があります。
                     </div>
                 </details>
             </div>
         </div>
     </section>
+
+    <script>
+        document.querySelectorAll('.faq-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.faq-tab').forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                document.querySelectorAll('.faq-panel').forEach(p => p.classList.add('hidden'));
+                document.querySelector(`.faq-panel[data-panel="${tab.dataset.tab}"]`).classList.remove('hidden');
+            });
+        });
+    </script>
 
     <section class="py-16 md:py-24 bg-primary text-white text-center">
         <div class="max-w-4xl mx-auto px-5 md:px-6 lg:px-8">
@@ -593,6 +956,77 @@
         </div>
     </section>
 
+    <!-- Carousel Script -->
+    <script>
+        const carousels = {};
+
+        function initCarousel(name, slideCount, autoPlayMs) {
+            const track = document.querySelector(`.${name}-carousel-track`);
+            const dotsContainer = document.getElementById(`${name}-dots`);
+            if (!track || !dotsContainer) return;
+
+            carousels[name] = { current: 0, total: slideCount, track, dotsContainer, interval: null };
+
+            // Create dots
+            for (let i = 0; i < slideCount; i++) {
+                const dot = document.createElement('button');
+                dot.className = 'w-2 h-2 rounded-full transition-all ' + (i === 0 ? 'bg-service-blue w-4' : 'bg-slate-300');
+                dot.addEventListener('click', () => goToSlide(name, i));
+                dotsContainer.appendChild(dot);
+            }
+
+            // Auto-play
+            if (autoPlayMs > 0) {
+                carousels[name].interval = setInterval(() => moveCarousel(name, 1), autoPlayMs);
+
+                // Pause on hover
+                const container = document.getElementById(`${name}-carousel`);
+                if (container) {
+                    container.addEventListener('mouseenter', () => clearInterval(carousels[name].interval));
+                    container.addEventListener('mouseleave', () => {
+                        carousels[name].interval = setInterval(() => moveCarousel(name, 1), autoPlayMs);
+                    });
+                }
+            }
+
+            // Touch/swipe support
+            let touchStartX = 0;
+            track.addEventListener('touchstart', (e) => { touchStartX = e.touches[0].clientX; }, { passive: true });
+            track.addEventListener('touchend', (e) => {
+                const diff = touchStartX - e.changedTouches[0].clientX;
+                if (Math.abs(diff) > 50) moveCarousel(name, diff > 0 ? 1 : -1);
+            }, { passive: true });
+        }
+
+        function goToSlide(name, index) {
+            const c = carousels[name];
+            if (!c) return;
+            c.current = index;
+            c.track.style.transform = `translateX(-${index * 100}%)`;
+
+            // Update dots
+            const dots = c.dotsContainer.children;
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].className = 'w-2 h-2 rounded-full transition-all ' +
+                    (i === index ? 'bg-service-blue w-4' : 'bg-slate-300');
+            }
+        }
+
+        function moveCarousel(name, direction) {
+            const c = carousels[name];
+            if (!c) return;
+            let next = c.current + direction;
+            if (next >= c.total) next = 0;
+            if (next < 0) next = c.total - 1;
+            goToSlide(name, next);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            initCarousel('lecture', 2, 4000);
+            initCarousel('workshop', 2, 4000);
+        });
+    </script>
+
     <!-- Footer -->
     <footer class="bg-slate-900 text-slate-400 py-12 md:py-16">
         <div class="px-5 md:px-6 lg:px-8 max-w-7xl mx-auto">
@@ -609,28 +1043,12 @@
                     <p class="text-sm">
                         <a href="contact.html" style="color: inherit; text-decoration: none;">お問い合わせ</a>
                     </p>
-                    <div class="flex gap-4 mt-6">
-                        <a class="hover:text-white transition-colors p-1" href="#"><span
-                                class="material-symbols-outlined text-xl">social_leaderboard</span></a>
-                        <a class="hover:text-white transition-colors p-1" href="#"><span
-                                class="material-symbols-outlined text-xl">alternate_email</span></a>
-                        <a class="hover:text-white transition-colors p-1" href="#"><span
-                                class="material-symbols-outlined text-xl">photo_camera</span></a>
-                    </div>
-                </div>
-                <div>
-                    <h4 class="text-white font-bold mb-4 md:mb-6 text-sm md:text-base">Links</h4>
-                    <ul class="text-sm space-y-3">
-                        <li><a class="hover:text-white transition-colors" href="index.html">Home</a></li>
-                        <li><a class="hover:text-white transition-colors" href="about.html">About</a></li>
-                        <li><a class="hover:text-white transition-colors" href="services.html">Services</a></li>
-                    </ul>
                 </div>
             </div>
             <div
                 class="border-t border-slate-800 mt-10 md:mt-16 pt-6 md:pt-8 flex flex-col md:flex-row justify-between items-center gap-3 md:gap-4 text-center md:text-left">
                 <p class="text-xs">© 2026 Ikikata Co., Ltd. All rights reserved.</p>
-                <p class="text-xs font-serif tracking-widest italic">Soulful Professionalism</p>
+                <p class="text-xs font-serif tracking-widest italic">Soulful Career Design</p>
             </div>
         </div>
     </footer>
