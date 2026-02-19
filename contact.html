@@ -221,20 +221,43 @@
                         </h2>
 
                         <form class="space-y-6">
-                            <!-- Inquiry Type -->
+                            <!-- Inquiry Type (multi-select) -->
                             <div>
                                 <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
-                                    お問い合わせ種別 <span class="text-accent">*</span>
+                                    お問い合わせ種別（複数選択可） <span class="text-accent">*</span>
                                 </label>
-                                <select
+                                <div class="space-y-3">
+                                    <label class="flex items-center gap-3 cursor-pointer">
+                                        <input type="checkbox" name="inquiry_type" value="lecture"
+                                            class="w-5 h-5 rounded border-slate-300 text-primary focus:ring-primary" />
+                                        <span class="text-sm text-slate-600 dark:text-slate-400">講演・セミナー</span>
+                                    </label>
+                                    <label class="flex items-center gap-3 cursor-pointer">
+                                        <input type="checkbox" name="inquiry_type" value="workshop"
+                                            class="w-5 h-5 rounded border-slate-300 text-primary focus:ring-primary" />
+                                        <span class="text-sm text-slate-600 dark:text-slate-400">企業研修・ワークショップ</span>
+                                    </label>
+                                    <label class="flex items-center gap-3 cursor-pointer">
+                                        <input type="checkbox" name="inquiry_type" value="career"
+                                            class="w-5 h-5 rounded border-slate-300 text-primary focus:ring-primary" />
+                                        <span class="text-sm text-slate-600 dark:text-slate-400">キャリア支援</span>
+                                    </label>
+                                    <label class="flex items-center gap-3 cursor-pointer">
+                                        <input type="checkbox" name="inquiry_type" value="other"
+                                            class="w-5 h-5 rounded border-slate-300 text-primary focus:ring-primary" />
+                                        <span class="text-sm text-slate-600 dark:text-slate-400">その他</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Company / Organization -->
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
+                                    会社名・所属組織 <span class="text-accent">*</span>
+                                </label>
+                                <input type="text"
                                     class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-zinc-800 text-slate-900 dark:text-white text-sm transition-all"
-                                    required>
-                                    <option value="">選択してください</option>
-                                    <option value="consultation">サービスに関するご相談</option>
-                                    <option value="corporate">法人・研修のご相談</option>
-                                    <option value="media">取材・メディア掲載</option>
-                                    <option value="other">その他</option>
-                                </select>
+                                    placeholder="株式会社○○" required />
                             </div>
 
                             <!-- Name -->
@@ -275,38 +298,6 @@
                                 <input type="tel"
                                     class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-zinc-800 text-slate-900 dark:text-white text-sm transition-all"
                                     placeholder="090-1234-5678" />
-                            </div>
-
-                            <!-- Interested Service -->
-                            <div>
-                                <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
-                                    ご興味のあるサービス
-                                </label>
-                                <div class="space-y-3">
-                                    <label class="flex items-center gap-3 cursor-pointer">
-                                        <input type="checkbox"
-                                            class="w-5 h-5 rounded border-slate-300 text-primary focus:ring-primary" />
-                                        <span class="text-sm text-slate-600 dark:text-slate-400">Career
-                                            Coaching（キャリアコーチング）</span>
-                                    </label>
-                                    <label class="flex items-center gap-3 cursor-pointer">
-                                        <input type="checkbox"
-                                            class="w-5 h-5 rounded border-slate-300 text-primary focus:ring-primary" />
-                                        <span class="text-sm text-slate-600 dark:text-slate-400">Mindset
-                                            Design（マインドセットデザイン）</span>
-                                    </label>
-                                    <label class="flex items-center gap-3 cursor-pointer">
-                                        <input type="checkbox"
-                                            class="w-5 h-5 rounded border-slate-300 text-primary focus:ring-primary" />
-                                        <span class="text-sm text-slate-600 dark:text-slate-400">Personal
-                                            Branding（パーソナルブランディング）</span>
-                                    </label>
-                                    <label class="flex items-center gap-3 cursor-pointer">
-                                        <input type="checkbox"
-                                            class="w-5 h-5 rounded border-slate-300 text-primary focus:ring-primary" />
-                                        <span class="text-sm text-slate-600 dark:text-slate-400">まだわからない / 相談したい</span>
-                                    </label>
-                                </div>
                             </div>
 
                             <!-- Message -->
@@ -382,28 +373,6 @@
                         </div>
                     </div>
 
-                    <!-- Social Links -->
-                    <div
-                        class="bg-white dark:bg-zinc-900 rounded-2xl soft-shadow border border-slate-100 dark:border-slate-800 p-6 md:p-8">
-                        <h3 class="text-lg md:text-xl font-serif text-slate-900 dark:text-white mb-4">SNSでフォロー</h3>
-                        <p class="text-sm text-slate-600 dark:text-slate-400 mb-4">
-                            キャリアに関するヒントや最新情報を発信しています。
-                        </p>
-                        <div class="flex gap-3">
-                            <a href="#"
-                                class="w-12 h-12 bg-slate-100 dark:bg-zinc-800 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
-                                <span class="material-symbols-outlined">social_leaderboard</span>
-                            </a>
-                            <a href="#"
-                                class="w-12 h-12 bg-slate-100 dark:bg-zinc-800 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
-                                <span class="material-symbols-outlined">alternate_email</span>
-                            </a>
-                            <a href="#"
-                                class="w-12 h-12 bg-slate-100 dark:bg-zinc-800 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
-                                <span class="material-symbols-outlined">photo_camera</span>
-                            </a>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -426,31 +395,26 @@
                     <p class="text-sm">
                         <a href="contact.html" style="color: inherit; text-decoration: none;">お問い合わせ</a>
                     </p>
-                    <div class="flex gap-4 mt-6">
-                        <a class="hover:text-white transition-colors p-1" href="#"><span
-                                class="material-symbols-outlined text-xl">social_leaderboard</span></a>
-                        <a class="hover:text-white transition-colors p-1" href="#"><span
-                                class="material-symbols-outlined text-xl">alternate_email</span></a>
-                        <a class="hover:text-white transition-colors p-1" href="#"><span
-                                class="material-symbols-outlined text-xl">photo_camera</span></a>
-                    </div>
-                </div>
-                <div>
-                    <h4 class="text-white font-bold mb-4 md:mb-6 text-sm md:text-base">Links</h4>
-                    <ul class="text-sm space-y-3">
-                        <li><a class="hover:text-white transition-colors" href="index.html">Home</a></li>
-                        <li><a class="hover:text-white transition-colors" href="about.html">About</a></li>
-                        <li><a class="hover:text-white transition-colors" href="services.html">Services</a></li>
-                    </ul>
                 </div>
             </div>
             <div
                 class="border-t border-slate-800 mt-10 md:mt-16 pt-6 md:pt-8 flex flex-col md:flex-row justify-between items-center gap-3 md:gap-4 text-center md:text-left">
                 <p class="text-xs">© 2026 Ikikata Co., Ltd. All rights reserved.</p>
-                <p class="text-xs font-serif tracking-widest italic">Soulful Professionalism</p>
+                <p class="text-xs font-serif tracking-widest italic">Soulful Career Design</p>
             </div>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const service = params.get('service');
+            if (service) {
+                const checkbox = document.querySelector(`input[name="inquiry_type"][value="${service}"]`);
+                if (checkbox) checkbox.checked = true;
+            }
+        });
+    </script>
 
 </body>
 
